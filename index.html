@@ -6,13 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="question.css">
-    <link rel="stylesheet" href="question.css">
-    <link rel="stylesheet" href="question.css">
 </head>
 <body>
     <div id="container">
-        <div class="bloc page">
+        <div class="bloc" id="index">
             <div class="presentation">
                 <h1 class="theme center">JavaScript Quiz</h1>
                 <p class="information center">
@@ -20,25 +17,25 @@
                     sélectionnées pour vous. <br> C'est fun et c'est gratuit. 
                 </p>
             </div>
-            <div class="identite">
+            <div class="identite conexion">
                 <form id="formulaire" action="">
                     <div class="text">   
                         <label for="">Nom</label><br>
-                        <input type="text" name="" id="nom">
+                        <input type="text" name="nom" id="nom">
+                        <div id="erreur-nom""></div>
                     </div>
-                    <div id="msg-nom"></div>
                     <div class="text">
                         <label for="email">Email</label><br>
-                        <input type="email" name="" id="email">
+                        <input type="email" name="email" id="email">
+                        <div id="erreur-email""></div>
                     </div>
-                    <div id="msg-nom"></div>
                     <div class="commencer">
-                        <input type="submit" name="" id="" value="Commencer">
+                        <input type="submit" name="" id="commencer" class="suivant" value="Commencer">
                     </div>
                 </form>
             </div>
         </div>
-        <div class="bloc ">
+        <div class="bloc quest">
             <div class="bloc-question">
                 <h6 class="list-question center">Quel est le type d'un fichier javascript ?</h6>
                 <div class="questionnaire center">
@@ -49,10 +46,13 @@
                             <div class="nb-sur">/15</div>
                         </div>
                    </div>
-                   <div class="temps">30</div>
+                   <div class="time">60s</div>
                 </div>
-                <div class="progress-bar">
-                    <div class="prossing"></div>
+                <!-- container-bar -->
+                <div class="progress">
+                    <!-- progress-bar -->
+                    <div class="progress-inner">
+                    </div>
                 </div>
             </div>
             <div class="response">
@@ -74,13 +74,657 @@
                         <p>Bandundu</p>
                     </div>
                     <div class="quit-suivant">
-                        <input type="submit" name="" id="" value="Quitter">
-                        <input type="submit" name="" id="" value="Suivant">
+                        <input type="submit" name="" id="quitter" value="Quitter">
+                        <input type="submit" name="" id="suivant-1" value="Suivant">
                     </div>
                 </form>
             </div>
         </div>
-        <div class="bloc">
+
+        <div class="bloc quest">
+            <div class="bloc-question">
+                <h6 class="list-question center">Quel est la question 2</h6>
+                <div class="questionnaire center">
+                   <div class="timing">
+                        <div class="ques">question </div>
+                        <div class="num-question">
+                            <div class="quest-nb">2</div>
+                            <div class="nb-sur">/15</div>
+                        </div>
+                   </div>
+                   <div class="time">60s</div>
+                </div>
+                <div class="progress">
+                    <div class="progress-inner">
+                    </div>
+                </div>
+            </div>
+            <div class="response">
+                <form id="form-question" action="">
+                    <div class="checkboxs">
+                        <input type="radio" name="" id="nom">
+                        <p>Kinshasa</p>
+                    </div>
+                    <div class="checkboxs">
+                        <input type="radio" name="" id="nom">
+                        <p>Lubumashi</p>
+                    </div>
+                    <div class="checkboxs">
+                        <input type="radio" name="" id="nom">
+                        <p>Matadi</p>
+                    </div>
+                    <div class="checkboxs">
+                        <input type="radio" name="" id="nom">
+                        <p>Bandundu</p>
+                    </div>
+                    <div class="quit-suivant">
+                        <input type="submit" name="" id="quitter" value="Quitter">
+                        <input type="submit" name="" id="suivant-2" value="Suivant">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="bloc quest">
+            <div class="bloc-question">
+                <h6 class="list-question center">Quel est la question 3 ?</h6>
+                <div class="questionnaire center">
+                   <div class="timing">
+                        <div class="ques">question </div>
+                        <div class="num-question">
+                            <div class="quest-nb">3</div>
+                            <div class="nb-sur">/15</div>
+                        </div>
+                   </div>
+                   <div class="time">60s</div>
+                </div>
+                <!-- container-bar -->
+                <div class="progress">
+                    <!-- progress-bar -->
+                    <div class="progress-inner">
+                    </div>
+                </div>
+            </div>
+            <div class="response">
+                <form id="form-question" action="">
+                    <div class="checkboxs">
+                        <input type="radio" name="" id="nom">
+                        <p>Kinshasa</p>
+                    </div>
+                    <div class="checkboxs">
+                        <input type="radio" name="" id="nom">
+                        <p>Lubumashi</p>
+                    </div>
+                    <div class="checkboxs">
+                        <input type="radio" name="" id="nom">
+                        <p>Matadi</p>
+                    </div>
+                    <div class="checkboxs">
+                        <input type="radio" name="" id="nom">
+                        <p>Bandundu</p>
+                    </div>
+                    <div class="quit-suivant">
+                        <input type="submit" name="" id="quitter" value="Quitter">
+                        <input type="submit" name="" id="suivant-3" value="Suivant">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="bloc quest">
+            <div class="bloc-question">
+                <h6 class="list-question center">Quel est la question 4?</h6>
+                <div class="questionnaire center">
+                   <div class="timing">
+                        <div class="ques">question </div>
+                        <div class="num-question">
+                            <div class="quest-nb">4</div>
+                            <div class="nb-sur">/15</div>
+                        </div>
+                   </div>
+                   <div class="time">60s</div>
+                </div>
+                <!-- container-bar -->
+                <div class="progress">
+                    <!-- progress-bar -->
+                    <div class="progress-inner">
+                    </div>
+                </div>
+            </div>
+            <div class="response">
+                <form id="form-question" action="">
+                    <div class="checkboxs">
+                        <input type="radio" name="" id="nom">
+                        <p>Kinshasa</p>
+                    </div>
+                    <div class="checkboxs">
+                        <input type="radio" name="" id="nom">
+                        <p>Lubumashi</p>
+                    </div>
+                    <div class="checkboxs">
+                        <input type="radio" name="" id="nom">
+                        <p>Matadi</p>
+                    </div>
+                    <div class="checkboxs">
+                        <input type="radio" name="" id="nom">
+                        <p>Bandundu</p>
+                    </div>
+                    <div class="quit-suivant">
+                        <input type="submit" name="" id="quitter" value="Quitter">
+                        <input type="submit" name="" id="suivant-4" value="Suivant">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="bloc quest">
+            <div class="bloc-question">
+                <h6 class="list-question center">Quel est la question 5?</h6>
+                <div class="questionnaire center">
+                   <div class="timing">
+                        <div class="ques">question </div>
+                        <div class="num-question">
+                            <div class="quest-nb">5</div>
+                            <div class="nb-sur">/15</div>
+                        </div>
+                   </div>
+                   <div class="time">60s</div>
+                </div>
+                <!-- container-bar -->
+                <div class="progress">
+                    <!-- progress-bar -->
+                    <div class="progress-inner">
+                    </div>
+                </div>
+            </div>    
+            <div class="response">
+                <form id="form-question" action="">
+                    <div class="checkboxs">
+                        <input type="radio" name="" id="nom">
+                        <p>Kinshasa</p>
+                    </div>
+                    <div class="checkboxs">
+                        <input type="radio" name="" id="nom">
+                        <p>Lubumashi</p>
+                    </div>
+                    <div class="checkboxs">
+                        <input type="radio" name="" id="nom">
+                        <p>Matadi</p>
+                    </div>
+                    <div class="checkboxs">
+                        <input type="radio" name="" id="nom">
+                        <p>Bandundu</p>
+                    </div>
+                    <div class="quit-suivant">
+                        <input type="submit" name="" id="quitter" value="Quitter">
+                        <input type="submit" name="" id="suivant-5" value="Suivant">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="bloc quest">
+            <div class="bloc-question">
+                <h6 class="list-question center">Quel est la question 6?</h6>
+                <div class="questionnaire center">
+                   <div class="timing">
+                        <div class="ques">question </div>
+                        <div class="num-question">
+                            <div class="quest-nb">6</div>
+                            <div class="nb-sur">/15</div>
+                        </div>
+                   </div>
+                   <div class="time">60s</div>
+                </div>
+                <!-- container-bar -->
+                <div class="progress">
+                    <!-- progress-bar -->
+                    <div class="progress-inner">
+                    </div>
+                </div>
+            </div>
+            <div class="response">
+                <form id="form-question" action="">
+                    <div class="checkboxs">
+                        <input type="radio" name="" id="nom">
+                        <p>Kinshasa</p>
+                    </div>
+                    <div class="checkboxs">
+                        <input type="radio" name="" id="nom">
+                        <p>Lubumashi</p>
+                    </div>
+                    <div class="checkboxs">
+                        <input type="radio" name="" id="nom">
+                        <p>Matadi</p>
+                    </div>
+                    <div class="checkboxs">
+                        <input type="radio" name="" id="nom">
+                        <p>Bandundu</p>
+                    </div>
+                    <div class="quit-suivant">
+                        <input type="submit" name="" id="quitter" value="Quitter">
+                        <input type="submit" name="" id="suivant-6" value="Suivant">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="bloc quest">
+            <div class="bloc-question">
+                <h6 class="list-question center">Quel est la question 7?</h6>
+                <div class="questionnaire center">
+                   <div class="timing">
+                        <div class="ques">question </div>
+                        <div class="num-question">
+                            <div class="quest-nb">7</div>
+                            <div class="nb-sur">/15</div>
+                        </div>
+                   </div>
+                   <div class="time">60s</div>
+                </div>
+                <!-- container-bar -->
+                <div class="progress">
+                    <!-- progress-bar -->
+                    <div class="progress-inner">
+                    </div>
+                </div>
+            </div>
+            <div class="response">
+                <form id="form-question" action="">
+                    <div class="checkboxs">
+                        <input type="radio" name="" id="nom">
+                        <p>Kinshasa</p>
+                    </div>
+                    <div class="checkboxs">
+                        <input type="radio" name="" id="nom">
+                        <p>Lubumashi</p>
+                    </div>
+                    <div class="checkboxs">
+                        <input type="radio" name="" id="nom">
+                        <p>Matadi</p>
+                    </div>
+                    <div class="checkboxs">
+                        <input type="radio" name="" id="nom">
+                        <p>Bandundu</p>
+                    </div>
+                    <div class="quit-suivant">
+                        <input type="submit" name="" id="quitter" value="Quitter">
+                        <input type="submit" name="" id="suivant-7" value="Suivant">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="bloc quest">
+            <div class="bloc-question">
+                <h6 class="list-question center">Quel est la question 8?</h6>
+                <div class="questionnaire center">
+                   <div class="timing">
+                        <div class="ques">question </div>
+                        <div class="num-question">
+                            <div class="quest-nb">8</div>
+                            <div class="nb-sur">/15</div>
+                        </div>
+                   </div>
+                   <div class="time">60s</div>
+                </div>
+                <!-- container-bar -->
+                <div class="progress">
+                    <!-- progress-bar -->
+                    <div class="progress-inner">
+                    </div>
+                </div>
+            </div>
+            <div class="response">
+                <form id="form-question" action="">
+                    <div class="checkboxs">
+                        <input type="radio" name="" id="nom">
+                        <p>Kinshasa</p>
+                    </div>
+                    <div class="checkboxs">
+                        <input type="radio" name="" id="nom">
+                        <p>Lubumashi</p>
+                    </div>
+                    <div class="checkboxs">
+                        <input type="radio" name="" id="nom">
+                        <p>Matadi</p>
+                    </div>
+                    <div class="checkboxs">
+                        <input type="radio" name="" id="nom">
+                        <p>Bandundu</p>
+                    </div>
+                    <div class="quit-suivant">
+                        <input type="submit" name="" id="quitter" value="Quitter">
+                        <input type="submit" name="" id="suivant-8" value="Suivant">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="bloc quest">
+            <div class="bloc-question">
+                <h6 class="list-question center">Quel est la question 9?</h6>
+                <div class="questionnaire center">
+                   <div class="timing">
+                        <div class="ques">question </div>
+                        <div class="num-question">
+                            <div class="quest-nb">9</div>
+                            <div class="nb-sur">/15</div>
+                        </div>
+                   </div>
+                   <div class="time">60s</div>
+                </div>
+                <!-- container-bar -->
+                <div class="progress">
+                    <!-- progress-bar -->
+                    <div class="progress-inner">
+                    </div>
+                </div>
+            </div>
+            <div class="response">
+                <form id="form-question" action="">
+                    <div class="checkboxs">
+                        <input type="radio" name="" id="nom">
+                        <p>Kinshasa</p>
+                    </div>
+                    <div class="checkboxs">
+                        <input type="radio" name="" id="nom">
+                        <p>Lubumashi</p>
+                    </div>
+                    <div class="checkboxs">
+                        <input type="radio" name="" id="nom">
+                        <p>Matadi</p>
+                    </div>
+                    <div class="checkboxs">
+                        <input type="radio" name="" id="nom">
+                        <p>Bandundu</p>
+                    </div>
+                    <div class="quit-suivant">
+                        <input type="submit" name="" id="quitter" value="Quitter">
+                        <input type="submit" name="" id="suivant-9" value="Suivant">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="bloc quest">
+            <div class="bloc-question">
+                <h6 class="list-question center">Quel est la question 10?</h6>
+                <div class="questionnaire center">
+                   <div class="timing">
+                        <div class="ques">question </div>
+                        <div class="num-question">
+                            <div class="quest-nb">10</div>
+                            <div class="nb-sur">/15</div>
+                        </div>
+                   </div>
+                   <div class="time">60s</div>
+                </div>
+                <!-- container-bar -->
+                <div class="progress">
+                    <!-- progress-bar -->
+                    <div class="progress-inner">
+                    </div>
+                </div>
+            </div>
+            <div class="response">
+                <form id="form-question" action="">
+                    <div class="checkboxs">
+                        <input type="radio" name="" id="nom">
+                        <p>Kinshasa</p>
+                    </div>
+                    <div class="checkboxs">
+                        <input type="radio" name="" id="nom">
+                        <p>Lubumashi</p>
+                    </div>
+                    <div class="checkboxs">
+                        <input type="radio" name="" id="nom">
+                        <p>Matadi</p>
+                    </div>
+                    <div class="checkboxs">
+                        <input type="radio" name="" id="nom">
+                        <p>Bandundu</p>
+                    </div>
+                    <div class="quit-suivant">
+                        <input type="submit" name="" id="quitter" value="Quitter">
+                        <input type="submit" name="" id="suivant-10" value="Suivant">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="bloc quest">
+            <div class="bloc-question">
+                <h6 class="list-question center">Quel est la question 11?</h6>
+                <div class="questionnaire center">
+                   <div class="timing">
+                        <div class="ques">question </div>
+                        <div class="num-question">
+                            <div class="quest-nb">11</div>
+                            <div class="nb-sur">/15</div>
+                        </div>
+                   </div>
+                   <div class="time">60s</div>
+                </div>
+                <!-- container-bar -->
+                <div class="progress">
+                    <!-- progress-bar -->
+                    <div class="progress-inner">
+                    </div>
+                </div>
+            </div>
+            <div class="response">
+                <form id="form-question" action="">
+                    <div class="checkboxs">
+                        <input type="radio" name="" id="nom">
+                        <p>Kinshasa</p>
+                    </div>
+                    <div class="checkboxs">
+                        <input type="radio" name="" id="nom">
+                        <p>Lubumashi</p>
+                    </div>
+                    <div class="checkboxs">
+                        <input type="radio" name="" id="nom">
+                        <p>Matadi</p>
+                    </div>
+                    <div class="checkboxs">
+                        <input type="radio" name="" id="nom">
+                        <p>Bandundu</p>
+                    </div>
+                    <div class="quit-suivant">
+                        <input type="submit" name="" id="quitter" value="Quitter">
+                        <input type="submit" name="" id="suivant-11" value="Suivant">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="bloc quest">
+            <div class="bloc-question">
+                <h6 class="list-question center">Quel est la question 12?</h6>
+                <div class="questionnaire center">
+                   <div class="timing">
+                        <div class="ques">question </div>
+                        <div class="num-question">
+                            <div class="quest-nb">12</div>
+                            <div class="nb-sur">/15</div>
+                        </div>
+                   </div>
+                   <div class="time">60s</div>
+                </div>
+                <!-- container-bar -->
+                <div class="progress">
+                    <!-- progress-bar -->
+                    <div class="progress-inner">
+                    </div>
+                </div>
+            </div>
+            <div class="response">
+                <form id="form-question" action="">
+                    <div class="checkboxs">
+                        <input type="radio" name="" id="nom">
+                        <p>Kinshasa</p>
+                    </div>
+                    <div class="checkboxs">
+                        <input type="radio" name="" id="nom">
+                        <p>Lubumashi</p>
+                    </div>
+                    <div class="checkboxs">
+                        <input type="radio" name="" id="nom">
+                        <p>Matadi</p>
+                    </div>
+                    <div class="checkboxs">
+                        <input type="radio" name="" id="nom">
+                        <p>Bandundu</p>
+                    </div>
+                    <div class="quit-suivant">
+                        <input type="submit" name="" id="quitter" value="Quitter">
+                        <input type="submit" name="" id="suivant-12" value="Suivant">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="bloc quest">
+            <div class="bloc-question">
+                <h6 class="list-question center">Quel est la question 13?</h6>
+                <div class="questionnaire center">
+                   <div class="timing">
+                        <div class="ques">question </div>
+                        <div class="num-question">
+                            <div class="quest-nb">13</div>
+                            <div class="nb-sur">/15</div>
+                        </div>
+                   </div>
+                   <div class="time">60s</div>
+                </div>
+                <!-- container-bar -->
+                <div class="progress">
+                    <!-- progress-bar -->
+                    <div class="progress-inner">
+                    </div>
+                </div>
+            </div>
+            <div class="response">
+                <form id="form-question" action="">
+                    <div class="checkboxs">
+                        <input type="radio" name="" id="nom">
+                        <p>Kinshasa</p>
+                    </div>
+                    <div class="checkboxs">
+                        <input type="radio" name="" id="nom">
+                        <p>Lubumashi</p>
+                    </div>
+                    <div class="checkboxs">
+                        <input type="radio" name="" id="nom">
+                        <p>Matadi</p>
+                    </div>
+                    <div class="checkboxs">
+                        <input type="radio" name="" id="nom">
+                        <p>Bandundu</p>
+                    </div>
+                    <div class="quit-suivant">
+                        <input type="submit" name="" id="quitter" value="Quitter">
+                        <input type="submit" name="" id="suivant-13" value="Suivant">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="bloc quest">
+            <div class="bloc-question">
+                <h6 class="list-question center">Quel est la question 14?</h6>
+                <div class="questionnaire center">
+                   <div class="timing">
+                        <div class="ques">question </div>
+                        <div class="num-question">
+                            <div class="quest-nb">14</div>
+                            <div class="nb-sur">/15</div>
+                        </div>
+                   </div>
+                   <div class="time">60s</div>
+                </div>
+                <!-- container-bar -->
+                <div class="progress">
+                    <!-- progress-bar -->
+                    <div class="progress-inner">
+                    </div>
+                </div>
+            </div>
+            <div class="response">
+                <form id="form-question" action="">
+                    <div class="checkboxs">
+                        <input type="radio" name="" id="nom">
+                        <p>Kinshasa</p>
+                    </div>
+                    <div class="checkboxs">
+                        <input type="radio" name="" id="nom">
+                        <p>Lubumashi</p>
+                    </div>
+                    <div class="checkboxs">
+                        <input type="radio" name="" id="nom">
+                        <p>Matadi</p>
+                    </div>
+                    <div class="checkboxs">
+                        <input type="radio" name="" id="nom">
+                        <p>Bandundu</p>
+                    </div>
+                    <div class="quit-suivant">
+                        <input type="submit" name="" id="quitter" value="Quitter">
+                        <input type="submit" name="" id="suivant-14" value="Suivant">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="bloc quest">
+            <div class="bloc-question">
+                <h6 class="list-question center">Quel est la question 15?</h6>
+                <div class="questionnaire center">
+                   <div class="timing">
+                        <div class="ques">question </div>
+                        <div class="num-question">
+                            <div class="quest-nb">15</div>
+                            <div class="nb-sur">/15</div>
+                        </div>
+                   </div>
+                   <div class="time">60s</div>
+                </div>
+                <!-- container-bar -->
+                <div class="progress">
+                    <!-- progress-bar -->
+                    <div class="progress-inner">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="response">
+                <form id="form-question" action="">
+                    <div class="checkboxs">
+                        <input type="radio" name="" id="nom">
+                        <p>Kinshasa</p>
+                    </div>
+                    <div class="checkboxs">
+                        <input type="radio" name="" id="nom">
+                        <p>Lubumashi</p>
+                    </div>
+                    <div class="checkboxs">
+                        <input type="radio" name="" id="nom">
+                        <p>Matadi</p>
+                    </div>
+                    <div class="checkboxs">
+                        <input type="radio" name="" id="nom">
+                        <p>Bandundu</p>
+                    </div>
+                    <div class="quit-suivant">
+                        <input type="submit" name="" id="quitter" value="Quitter">
+                        <input type="submit" name="" id="suivant-15" value="Suivant">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+        <div class="bloc" id="msg-reussi">
             <div class="bloc-question">
                 <h1 class="nom-joueur center">Jeannot Diambu</h1>
                 <p class="email-joueur">diambujeannot@gmail.com</p>
@@ -91,11 +735,11 @@
                 </div>
                 <div class="num-page">1/15</div>
                 <div class="vers-accueil">
-                    <input type="submit" name="" id="" value="Accueil">
+                    <input type="submit" name="" id="accueil-1" value="Accueil">
                 </div>
             </div>
         </div>
-        <div class="bloc">
+        <div class="bloc" id="msg-echec">
             <div class="bloc-question">
                 <h1 class="nom-joueur center">Jeannot Diambu</h1>
                 <p class="email-joueur">diambujeannot@gmail.com</p>
@@ -106,12 +750,13 @@
                 </div>
                 <div class="num-page">14/15</div>
                 <div class="vers-accueil">
-                    <input type="submit" name="" id="" value="Accueil">
+                    <input type="submit" name="" id="accueil-2" value="Accueil">
                 </div>
             </div>
         </div>
     </div>
 
     <script src="event.js"></script>
+    <script src="event2.js"></script>
 </body>
 </html> 

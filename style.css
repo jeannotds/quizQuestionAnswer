@@ -36,8 +36,12 @@ label{
     display: none;
 }
 
-.page{
+#index{
     display: block;
+}
+
+.index-change{
+    display: none;
 }
 
 .presentation{
@@ -46,6 +50,7 @@ label{
 
 .identite{
     margin: 0 30px;
+    position: relative;
 }
 
 .center{
@@ -142,17 +147,17 @@ form div{
     margin-right: 5px;
 }
 
-.progress-bar{
+.progress{
     width: 100%;
     height: 7px;
     background-color: #dddddd;
     border-radius: 10px;
 }
 
-.progress-bar div{
+.progress .progress-inner, .progress-inner1{
     background-color: #009738;
     height: 7px;
-    width: 50%;
+    width: 100%;
     border-radius: 10px;
 }
 
@@ -172,6 +177,7 @@ form div{
 
 .quit-suivant input:first-child{
     margin-top: 10px;
+    margin-right: 10px;
     width: 149px;
     height: 40px;
     border: 0;
@@ -183,6 +189,7 @@ form div{
 
 .quit-suivant input:last-child{
     margin-top: 10px;
+    margin-left: 10px;
     width: 149px;
     height: 40px;
     border: 0;
@@ -231,3 +238,20 @@ form div{
 .img-neg{
     margin: 10px 0;
 }
+
+#erreur-email{
+    font-size: 15px;
+    color: red;
+    position: absolute;
+    top: 0;
+    padding-top: 125px;
+}
+
+#erreur-nom{
+    font-size: 15px;
+    color: red;
+    position: absolute;
+    top: 0;
+    padding-top: 45px;
+}
+
