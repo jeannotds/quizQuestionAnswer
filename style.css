@@ -154,7 +154,7 @@ form div{
     border-radius: 10px;
 }
 
-.progress .progress-inner, .progress-inner1{
+.progress .progress-inner{
     background-color: #009738;
     height: 7px;
     width: 100%;
