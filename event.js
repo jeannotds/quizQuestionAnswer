@@ -37,11 +37,10 @@ suivant11.addEventListener('click',suivant_11);
 suivant12.addEventListener('click',suivant_12);
 suivant13.addEventListener('click',suivant_13);
 suivant14.addEventListener('click',suivant_14);
-// suivant15.addEventListener('click',suivant_15);
+suivant15.addEventListener('click',suivantResNeg);
 function action(){
     commencer.addEventListener('click', (e)=>{
         e.preventDefault();
-
         let nom = document.querySelector('#nom').value;
         let email = document.querySelector('#email').value;
         let erreurNom = document.querySelector('#erreur-nom');
@@ -426,13 +425,23 @@ function action(){
                 timeSpan[14].innerHTML = interval + "s";
                 if(interval == 0){
                     e.preventDefault();
-                    console.log("page3ayto")
                     afQuest[15].style.display = "none";
-
+                    afQuest[16].style.display = "block";
+                    // SI LE RESULTAT EST SUP A 7
                     suivant15.click();
+                    //SINON
                     e.preventDefault();
                     console.log("fin")
-                    
                 }
             }, 1000)
+        }
+        function suivantResPos(e){
+            afQuest[15].style.display = "none";
+            afQuest[16].style.display = "block";
+            e.preventDefault();
+        }
+        function suivantResNeg(e){
+            afQuest[15].style.display = "none";
+            afQuest[17].style.display = "block";
+            e.preventDefault();
         }
