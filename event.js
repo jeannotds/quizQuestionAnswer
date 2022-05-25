@@ -23,6 +23,7 @@ const resAccueil = document.querySelector('#resAccueil');
 const echAccueil = document.querySelector('#echAccueil');
 let countDown = null
 action();
+const response = document.querySelectorAll('.response');
 suivant1.addEventListener('click',suivant_1)
 suivant2.addEventListener('click',suivant_2)
 suivant3.addEventListener('click',suivant_3);
@@ -37,7 +38,8 @@ suivant11.addEventListener('click',suivant_11);
 suivant12.addEventListener('click',suivant_12);
 suivant13.addEventListener('click',suivant_13);
 suivant14.addEventListener('click',suivant_14);
-suivant15.addEventListener('click',suivantResNeg);
+suivant15.addEventListener('click',suivantResPos);
+let quitter1 = document.querySelector('#quitter-1');
 function action(){
     commencer.addEventListener('click', (e)=>{
         e.preventDefault();
@@ -69,27 +71,25 @@ function action(){
                  if (interval == 0) {
                     afQuest[1].style.display ="none";
                     afQuest[2].style.display ="block";
-                    console.log("page1 auto")
+                    activeB1();
                     suivant1.click()
                  }
             }, 1000)
         nom = document.querySelector('#nom').value ="";
         email = document.querySelector('#email').value="";
-        } 
+        }
     })
 }
-
-// ########################################################################################
       function suivant_1(e){
                e.preventDefault() 
                afQuest[1].style.display = 'none';
                afQuest[2].style.display = 'block';
                clearInterval(countDown);
                countDown = null
-               let interval = 10
+               let interval = 60
                countDown = setInterval(()=>{
                 interval--;
-                let progressWidth = interval / 10*100;
+                let progressWidth = interval / 60*100;
                 if(interval >= 0){
                     progressBar[1].style.width = progressWidth++ +"%";
                     timeSpan[1].innerHTML = interval + "s";
@@ -99,7 +99,7 @@ function action(){
                  if (interval == 0) {
                     afQuest[2].style.display = "none";
                     afQuest[3].style.display = "block";
-                    console.log('page2 auto');
+                    activeB2();
                     suivant2.click();
                     e.preventDefault()
                  }
@@ -112,10 +112,10 @@ function action(){
                 afQuest[3].style.display = "block";
                 clearInterval(countDown);
                 countDown = null;
-                let interval = 10;
+                let interval = 60;
                 countDown = setInterval(()=>{
                     interval--;
-                    let progressWidth = interval / 10*100;
+                    let progressWidth = interval / 60*100;
                     if(interval >= 0){
                         progressBar[2].style.width = progressWidth++ +"%";
                         timeSpan[2].innerHTML = interval;
@@ -126,6 +126,7 @@ function action(){
                         console.log("page3ayto")
                         afQuest[3].style.display = "none";
                         afQuest[4].style.display = "block";
+                        activeB3();
                         suivant3.click();
                         e.preventDefault();
                     }
@@ -138,10 +139,10 @@ function action(){
             afQuest[4].style.display = "block";
             clearInterval(countDown);
             countDown = null;
-            let interval = 10;
+            let interval = 60;
             countDown = setInterval(()=>{
                 interval--;
-                let progressWidth = interval / 10*100;
+                let progressWidth = interval / 60*100;
                 if(interval >= 0){
                     progressBar[3].style.width = progressWidth++ +"%";
                     timeSpan[3].innerHTML = interval;
@@ -152,6 +153,7 @@ function action(){
                     console.log("page3ayto")
                     afQuest[4].style.display = "none";
                     afQuest[5].style.display = "block";
+                    activeB4();
                     suivant4.click();
                     e.preventDefault();
                 }
@@ -163,10 +165,10 @@ function action(){
             afQuest[5].style.display = "block";
             clearInterval(countDown);
             countDown = null;
-            let interval = 10;
+            let interval = 60;
             countDown = setInterval(()=>{
                 interval--;
-                let progressWidth = interval / 10*100;
+                let progressWidth = interval / 60*100;
                 if(interval >= 0){
                     progressBar[4].style.width = progressWidth++ +"%";
                     timeSpan[4].innerHTML = interval;
@@ -177,6 +179,7 @@ function action(){
                     console.log("page3ayto")
                     afQuest[5].style.display = "none";
                     afQuest[6].style.display = "block";
+                    activeB5()
                     suivant5.click();
                     e.preventDefault();
                 }
@@ -188,10 +191,10 @@ function action(){
             afQuest[6].style.display = "block";
             clearInterval(countDown);
             countDown = null;
-            let interval = 10;
+            let interval = 60;
             countDown = setInterval(()=>{
                 interval--;
-                let progressWidth = interval / 10*100;
+                let progressWidth = interval / 60*100;
                 if(interval >= 0){
                     progressBar[5].style.width = progressWidth++ +"%";
                     timeSpan[5].innerHTML = interval;
@@ -202,6 +205,7 @@ function action(){
                     console.log("page3ayto")
                     afQuest[6].style.display = "none";
                     afQuest[7].style.display = "block";
+                    activeB6()
                     suivant6.click();
                     e.preventDefault();
                 }
@@ -213,10 +217,10 @@ function action(){
             afQuest[7].style.display = "block";
             clearInterval(countDown);
             countDown = null;
-            let interval = 10;
+            let interval = 60;
             countDown = setInterval(()=>{
                 interval--;
-                let progressWidth = interval / 10*100;
+                let progressWidth = interval / 60*100;
                 if(interval >= 0){
                     progressBar[6].style.width = progressWidth++ +"%";
                     timeSpan[6].innerHTML = interval;
@@ -227,6 +231,7 @@ function action(){
                     console.log("page3ayto")
                     afQuest[7].style.display = "none";
                     afQuest[8].style.display = "block";
+                    activeB7()
                     suivant7.click();
                     e.preventDefault();
                 }
@@ -238,10 +243,10 @@ function action(){
             afQuest[8].style.display = "block";
             clearInterval(countDown);
             countDown = null;
-            let interval = 10;
+            let interval = 60;
             countDown = setInterval(()=>{
                 interval--;
-                let progressWidth = interval / 10*100;
+                let progressWidth = interval / 60*100;
                 if(interval >= 0){
                     progressBar[7].style.width = progressWidth++ +"%";
                     timeSpan[7].innerHTML = interval;
@@ -252,6 +257,7 @@ function action(){
                     console.log("page3ayto")
                     afQuest[8].style.display = "none";
                     afQuest[9].style.display = "block";
+                    activeB8()
                     suivant8.click();
                     e.preventDefault();
                 }
@@ -263,10 +269,10 @@ function action(){
             afQuest[9].style.display = "block";
             clearInterval(countDown);
             countDown = null;
-            let interval = 10;
+            let interval = 60;
             countDown = setInterval(()=>{
                 interval--;
-                let progressWidth = interval / 10*100;
+                let progressWidth = interval / 60*100;
                 if(interval >= 0){
                     progressBar[8].style.width = progressWidth++ +"%";
                     timeSpan[8].innerHTML = interval;
@@ -277,6 +283,7 @@ function action(){
                     console.log("page3ayto")
                     afQuest[9].style.display = "none";
                     afQuest[10].style.display = "block";
+                    activeB9()
                     suivant9.click();
                     e.preventDefault();
                 }
@@ -288,10 +295,10 @@ function action(){
             afQuest[10].style.display = "block";
             clearInterval(countDown);
             countDown = null;
-            let interval = 10;
+            let interval = 60;
             countDown = setInterval(()=>{
                 interval--;
-                let progressWidth = interval / 10*100;
+                let progressWidth = interval / 60*100;
                 if(interval >= 0){
                     progressBar[9].style.width = progressWidth++ +"%";
                     timeSpan[9].innerHTML = interval;
@@ -302,6 +309,7 @@ function action(){
                     console.log("page3ayto")
                     afQuest[10].style.display = "none";
                     afQuest[11].style.display = "block";
+                    activeB10()
                     suivant10.click();
                     e.preventDefault();
                 }
@@ -313,10 +321,10 @@ function action(){
             afQuest[11].style.display = "block";
             clearInterval(countDown);
             countDown = null;
-            let interval = 10;
+            let interval = 60;
             countDown = setInterval(()=>{
                 interval--;
-                let progressWidth = interval / 10*100;
+                let progressWidth = interval / 60*100;
                 if(interval >= 0){
                     progressBar[10].style.width = progressWidth++ +"%";
                     timeSpan[10].innerHTML = interval;
@@ -327,6 +335,7 @@ function action(){
                     console.log("page3ayto")
                     afQuest[11].style.display = "none";
                     afQuest[12].style.display = "block";
+                    activeB11()
                     suivant11.click();
                     e.preventDefault();
                 }
@@ -338,10 +347,10 @@ function action(){
             afQuest[12].style.display = "block";
             clearInterval(countDown);
             countDown = null;
-            let interval = 10;
+            let interval = 60;
             countDown = setInterval(()=>{
                 interval--;
-                let progressWidth = interval / 10*100;
+                let progressWidth = interval / 60*100;
                 if(interval >= 0){
                     progressBar[11].style.width = progressWidth++ +"%";
                     timeSpan[11].innerHTML = interval;
@@ -352,6 +361,7 @@ function action(){
                     console.log("page3ayto")
                     afQuest[12].style.display = "none";
                     afQuest[13].style.display = "block";
+                    activeB12()
                     suivant12.click();
                     e.preventDefault();
                 }
@@ -363,10 +373,10 @@ function action(){
             afQuest[13].style.display = "block";
             clearInterval(countDown);
             countDown = null;
-            let interval = 10;
+            let interval = 60;
             countDown = setInterval(()=>{
                 interval--;
-                let progressWidth = interval / 10*100;
+                let progressWidth = interval / 60*100;
                 if(interval >= 0){
                     progressBar[12].style.width = progressWidth++ +"%";
                     timeSpan[12].innerHTML = interval;
@@ -377,6 +387,7 @@ function action(){
                     console.log("page3ayto")
                     afQuest[13].style.display = "none";
                     afQuest[14].style.display = "block";
+                    activeB13()
                     suivant13.click();
                     e.preventDefault();
                 }
@@ -388,10 +399,10 @@ function action(){
             afQuest[14].style.display = "block";
             clearInterval(countDown);
             countDown = null;
-            let interval = 10;
+            let interval = 60;
             countDown = setInterval(()=>{
                 interval--;
-                let progressWidth = interval / 10*100;
+                let progressWidth = interval / 60*100;
                 if(interval >= 0){
                     progressBar[13].style.width = progressWidth++ +"%";
                     timeSpan[13].innerHTML = interval;
@@ -402,6 +413,7 @@ function action(){
                     console.log("page3ayto")
                     afQuest[14].style.display = "none";
                     afQuest[15].style.display = "block";
+                    activeB14()
                     suivant14.click();
                     e.preventDefault();
                 }
@@ -413,10 +425,10 @@ function action(){
             afQuest[15].style.display = "block";
             clearInterval(countDown);
             countDown = null;
-            let interval = 10;
+            let interval = 60;
             countDown = setInterval(()=>{
                 interval--;
-                let progressWidth = interval / 10*100;
+                let progressWidth = interval / 60*100;
                 if(interval >= 0){
                     progressBar[14].style.width = progressWidth++ +"%";
                     timeSpan[14].innerHTML = interval;
@@ -430,6 +442,7 @@ function action(){
                     // SI LE RESULTAT EST SUP A 7
                     suivant15.click();
                     //SINON
+                    activeB15()
                     e.preventDefault();
                     console.log("fin")
                 }
@@ -440,8 +453,142 @@ function action(){
             afQuest[16].style.display = "block";
             e.preventDefault();
         }
-        function suivantResNeg(e){
-            afQuest[15].style.display = "none";
-            afQuest[17].style.display = "block";
-            e.preventDefault();
-        }
+
+// ##############################################################################
+// ###############################ACTIVER ET DESACTIVER##########################
+function activeB1(){
+    suivant1.removeAttribute('disabled')
+    suivant1.style.background = "blue";
+}
+response[0].addEventListener('click', (e)=>{
+    e.preventDefault();
+    activeB1();
+})
+// #######################################################################################
+function activeB2(){
+    suivant2.removeAttribute('disabled')
+    suivant2.style.background = "blue";
+}
+response[1].addEventListener('click', (e)=>{
+    e.preventDefault();
+    activeB2();
+})
+// #######################################################################################
+function activeB3(){
+    suivant3.removeAttribute('disabled')
+    suivant3.style.background = "blue";
+}
+response[2].addEventListener('click', (e)=>{
+    e.preventDefault();
+    activeB3();
+})
+// #######################################################################################
+function activeB4(){
+    suivant4.removeAttribute('disabled')
+    suivant4.style.background = "blue";
+}
+response[3].addEventListener('click', (e)=>{
+    e.preventDefault();
+    activeB4();
+})
+// #######################################################################################
+function activeB5(){
+    suivant5.removeAttribute('disabled')
+    suivant5.style.background = "blue";
+}
+response[4].addEventListener('click', (e)=>{
+    e.preventDefault();
+    activeB5();
+})
+// #######################################################################################
+function activeB6(){
+    suivant6.removeAttribute('disabled')
+    suivant6.style.background = "blue";
+}
+response[5].addEventListener('click', (e)=>{
+    e.preventDefault();
+    activeB6();
+})
+// #######################################################################################
+function activeB7(){
+    suivant7.removeAttribute('disabled')
+    suivant7.style.background = "blue";
+}
+response[6].addEventListener('click', (e)=>{
+    e.preventDefault();
+    activeB7();
+})
+// #######################################################################################
+function activeB8(){
+    suivant8.removeAttribute('disabled')
+    suivant8.style.background = "blue";
+}
+response[7].addEventListener('click', (e)=>{
+    e.preventDefault();
+    activeB8();
+})
+// #######################################################################################
+// #######################################################################################
+function activeB9(){
+    suivant9.removeAttribute('disabled')
+    suivant9.style.background = "blue";
+}
+response[8].addEventListener('click', (e)=>{
+    e.preventDefault();
+    activeB9();
+})
+// #######################################################################################
+function activeB10(){
+    suivant10.removeAttribute('disabled')
+    suivant10.style.background = "blue";
+}
+response[9].addEventListener('click', (e)=>{
+    e.preventDefault();
+    activeB10();
+})
+// #######################################################################################
+function activeB11(){
+    suivant11.removeAttribute('disabled')
+    suivant11.style.background = "blue";
+}
+response[10].addEventListener('click', (e)=>{
+    e.preventDefault();
+    activeB11();
+})
+// #######################################################################################
+function activeB12(){
+    suivant12.removeAttribute('disabled')
+    suivant12.style.background = "blue";
+}
+response[11].addEventListener('click', (e)=>{
+    e.preventDefault();
+    activeB12();
+})
+// #######################################################################################
+function activeB13(){
+    suivant13.removeAttribute('disabled')
+    suivant13.style.background = "blue";
+}
+response[12].addEventListener('click', (e)=>{
+    e.preventDefault();
+    activeB13();
+})
+// #######################################################################################
+function activeB14(){
+    suivant14.removeAttribute('disabled')
+    suivant14.style.background = "blue";
+}
+response[13].addEventListener('click', (e)=>{
+    e.preventDefault();
+    activeB14();
+})
+// #######################################################################################
+function activeB15(){
+    suivant15.removeAttribute('disabled')
+    suivant15.style.background = "blue";
+}
+response[14].addEventListener('click', (e)=>{
+    e.preventDefault();
+    activeB15();
+})
+// #######################################################################################
