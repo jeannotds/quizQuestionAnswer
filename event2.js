@@ -1,418 +1,179 @@
+let index = document.querySelector('#index');
+let afQuest = document.querySelectorAll('.bloc')
+let commencer = document.querySelector('#commencer');
+let suivant1 = document.querySelector('#suivant-1');
+let suivant2 = document.querySelector('#suivant-2');
+let suivant3 = document.querySelector('#suivant-3');
+let suivant4 = document.querySelector('#suivant-4');
+let suivant5 = document.querySelector('#suivant-5');
+let suivant6 = document.querySelector('#suivant-6');
+let suivant7 = document.querySelector('#suivant-7');
+let suivant8 = document.querySelector('#suivant-8');
+let suivant9 = document.querySelector('#suivant-9');
+let suivant10 = document.querySelector('#suivant-10');
+let suivant11 = document.querySelector('#suivant-11');
+let suivant12 = document.querySelector('#suivant-12');
+let suivant13 = document.querySelector('#suivant-13');
+let suivant14 = document.querySelector('#suivant-14');
+let suivant15 = document.querySelector('#suivant-15');
+const btnStart = document.querySelector('.btn-start');
+const timeSpan = document.querySelectorAll('.time');
+const progressBar = document.querySelectorAll('.progress-inner');
+const resAccueil = document.querySelector('#resAccueil');
+const echAccueil = document.querySelector('#echAccueil');
+let countDown = null
+action();
+const response = document.querySelectorAll('.response');
+suivant1.addEventListener('click',suivant_1)
+suivant2.addEventListener('click',suivant_2)
+suivant3.addEventListener('click',suivant_3);
+suivant4.addEventListener('click',suivant_4);
+suivant5.addEventListener('click',suivant_5);
+suivant6.addEventListener('click',suivant_6);
+suivant7.addEventListener('click',suivant_7);
+suivant8.addEventListener('click',suivant_8);
+suivant9.addEventListener('click',suivant_9);
+suivant10.addEventListener('click',suivant_10);
+suivant11.addEventListener('click',suivant_11);
+suivant12.addEventListener('click',suivant_12);
+suivant13.addEventListener('click',suivant_13);
+suivant14.addEventListener('click',suivant_14);
+suivant15.addEventListener('click',suivantResPos);
+let quitter1 = document.querySelector('#quitter-1');
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// function count1(){
-//     addEventListener('click', (e)=>{
-//         e.preventDefault();
-//         console.log('cool')
-//         let interval = 10;
-//         var countDown = setInterval(()=>{
-//             interval--;
-//             let progressWidth = interval / 10*100;
-//             if(interval >= 0){
-//                 progressBar[0].style.width = progressWidth++ +"%";
-//                 timeSpan[0].innerHTML = interval + "s";
-//                 checkColor(progressWidth)
-//             }else{
-//                 clearInterval(countDown)
-//                 timeSpan[0].innerHTML = "0s";
-//                 if(timeSpan[0].innerHTML = "0s"){
-                
-//                 }
-//             }
-//         }, 1000)
-//     })
-//     const checkColor = (width) =>{
-//         if(width>60){
-//             progressBar[0].style.background = "green";
-//         }
-//     }
-// }
-
-// function count2(){
-//     addEventListener('click', (e)=>{
-//         e.preventDefault();
-//         console.log('cool')
-//         let interval = 60;
-//         var countDown = setInterval(()=>{
-//             interval--;
-//             let progressWidth = interval / 60*100;
-//             if(interval > 0){
-//                 progressBar[1].style.width = progressWidth++ +"%";
-//                 timeSpan[1].innerHTML = interval + "s";
-//                 checkColor(progressWidth)
-//             }else{
-//                 clearInterval(countDown)
-//                 progressBar[1].style.width = "0%";
-//                 // timeSpan.innerHTML = "Game over";
-//                 timeSpan[1].innerHTML = "0" + "s";
-//             }
-//         }, 1000)
-//     })
-//     const checkColor = (width) =>{
-//         if(width>60){
-//             progressBar[1].style.background = "green";
-//         }
-//     }
-// }
-// function count3(){
-//     addEventListener('click', (e)=>{
-//         e.preventDefault();
-//         console.log('cool')
-//         let interval = 60;
-//         var countDown = setInterval(()=>{
-//             interval--;
-//             let progressWidth = interval / 60*100;
-//             if(interval > 0){
-//                 progressBar[2].style.width = progressWidth++ +"%";
-//                 timeSpan[2].innerHTML = interval + "s";
-//                 checkColor(progressWidth)
-//             }else{
-//                 clearInterval(countDown)
-//                 progressBar[2].style.width = "0%";
-//                 // timeSpan.innerHTML = "Game over";
-//                 timeSpan[2].innerHTML = "0" + "s";
-//             }
-//         }, 1000)
-//     })
-//     const checkColor = (width) =>{
-//         if(width>60){
-//             progressBar[2].style.background = "green";
-//         }
-//     }
-// }
-// function count4(){
-//     addEventListener('click', (e)=>{
-//         e.preventDefault();
-//         console.log('cool')
-//         let interval = 60;
-//         var countDown = setInterval(()=>{
-//             interval--;
-//             let progressWidth = interval / 60*100;
-//             if(interval > 0){
-//                 progressBar[3].style.width = progressWidth++ +"%";
-//                 timeSpan[3].innerHTML = interval + "s";
-//                 checkColor(progressWidth)
-//             }else{
-//                 clearInterval(countDown)
-//                 progressBar[3].style.width = "0%";
-//                 // timeSpan.innerHTML = "Game over";
-//                 timeSpan[3].innerHTML = "0" + "s";
-//             }
-//         }, 1000)
-//     })
-//     const checkColor = (width) =>{
-//         if(width>60){
-//             progressBar[3].style.background = "green";
-//         }
-//     }
-// }
-// function count5(){
-//     addEventListener('click', (e)=>{
-//         e.preventDefault();
-//         console.log('cool')
-//         let interval = 60;
-//         var countDown = setInterval(()=>{
-//             interval--;
-//             let progressWidth = interval / 60*100;
-//             if(interval > 0){
-//                 progressBar[4].style.width = progressWidth++ +"%";
-//                 timeSpan[4].innerHTML = interval + "s";
-//                 checkColor(progressWidth)
-//             }else{
-//                 clearInterval(countDown)
-//                 progressBar[4].style.width = "0%";
-//                 // timeSpan.innerHTML = "Game over";
-//                 timeSpan[4].innerHTML = "0" + "s";
-//             }
-//         }, 1000)
-//     })
-//     const checkColor = (width) =>{
-//         if(width>60){
-//             progressBar[4].style.background = "green";
-//         }
-//     }
-// }
-// function count6(){
-//     addEventListener('click', (e)=>{
-//         e.preventDefault();
-//         console.log('cool')
-//         let interval = 60;
-//         var countDown = setInterval(()=>{
-//             interval--;
-//             let progressWidth = interval / 60*100;
-//             if(interval > 0){
-//                 progressBar[5].style.width = progressWidth++ +"%";
-//                 timeSpan[5].innerHTML = interval + "s";
-//                 checkColor(progressWidth)
-//             }else{
-//                 clearInterval(countDown)
-//                 progressBar[5].style.width = "0%";
-//                 // timeSpan.innerHTML = "Game over";
-//                 timeSpan[5].innerHTML = "0" + "s";
-//             }
-//         }, 1000)
-//     })
-//     const checkColor = (width) =>{
-//         if(width>60){
-//             progressBar[5].style.background = "green";
-//         }
-//     }
-// }
-
-// function count7(){
-//     addEventListener('click', (e)=>{
-//         e.preventDefault();
-//         console.log('cool')
-//         let interval = 60;
-//         var countDown = setInterval(()=>{
-//             interval--;
-//             let progressWidth = interval / 60*100;
-//             if(interval > 0){
-//                 progressBar[6].style.width = progressWidth++ +"%";
-//                 timeSpan[6].innerHTML = interval + "s";
-//                 checkColor(progressWidth)
-//             }else{
-//                 clearInterval(countDown)
-//                 progressBar[6].style.width = "0%";
-//                 // timeSpan.innerHTML = "Game over";
-//                 timeSpan[6].innerHTML = "0" + "s";
-//             }
-//         }, 1000)
-//     })
-//     const checkColor = (width) =>{
-//         if(width>60){
-//             progressBar[6].style.background = "green";
-//         }
-//     }
-// }
-// function count8(){
-//     addEventListener('click', (e)=>{
-//         e.preventDefault();
-//         console.log('cool')
-//         let interval = 60;
-//         var countDown = setInterval(()=>{
-//             interval--;
-//             let progressWidth = interval / 60*100;
-//             if(interval > 0){
-//                 progressBar[7].style.width = progressWidth++ +"%";
-//                 timeSpan[7].innerHTML = interval + "s";
-//                 checkColor(progressWidth)
-//             }else{
-//                 clearInterval(countDown)
-//                 progressBar[7].style.width = "0%";
-//                 // timeSpan.innerHTML = "Game over";
-//                 timeSpan[7].innerHTML = "0" + "s";
-//             }
-//         }, 1000)
-//     })
-//     const checkColor = (width) =>{
-//         if(width>60){
-//             progressBar[7].style.background = "green";
-//         }
-//     }
-// }
-// function count9(){
-//     addEventListener('click', (e)=>{
-//         e.preventDefault();
-//         console.log('cool')
-//         let interval = 60;
-//         var countDown = setInterval(()=>{
-//             interval--;
-//             let progressWidth = interval / 60*100;
-//             if(interval > 0){
-//                 progressBar[8].style.width = progressWidth++ +"%";
-//                 timeSpan[8].innerHTML = interval + "s";
-//                 checkColor(progressWidth)
-//             }else{
-//                 clearInterval(countDown)
-//                 progressBar[8].style.width = "0%";
-//                 // timeSpan.innerHTML = "Game over";
-//                 timeSpan[8].innerHTML = "0" + "s";
-//             }
-//         }, 1000)
-//     })
-//     const checkColor = (width) =>{
-//         if(width>60){
-//             progressBar[8].style.background = "green";
-//         }
-//     }
-// }
-// function count10(){
-//     addEventListener('click', (e)=>{
-//         e.preventDefault();
-//         console.log('cool')
-//         let interval = 60;
-//         var countDown = setInterval(()=>{
-//             interval--;
-//             let progressWidth = interval / 60*100;
-//             if(interval > 0){
-//                 progressBar[9].style.width = progressWidth++ +"%";
-//                 timeSpan[9].innerHTML = interval + "s";
-//                 checkColor(progressWidth)
-//             }else{
-//                 clearInterval(countDown)
-//                 progressBar[9].style.width = "0%";
-//                 // timeSpan.innerHTML = "Game over";
-//                 timeSpan[9].innerHTML = "0" + "s";
-//             }
-//         }, 1000)
-//     })
-//     const checkColor = (width) =>{
-//         if(width>60){
-//             progressBar[9].style.background = "green";
-//         }
-//     }
-// }
-// function count11(){
-//     addEventListener('click', (e)=>{
-//         e.preventDefault();
-//         console.log('cool')
-//         let interval = 60;
-//         var countDown = setInterval(()=>{
-//             interval--;
-//             let progressWidth = interval / 60*100;
-//             if(interval > 0){
-//                 progressBar[10].style.width = progressWidth++ +"%";
-//                 timeSpan[10].innerHTML = interval + "s";
-//                 checkColor(progressWidth)
-//             }else{
-//                 clearInterval(countDown)
-//                 progressBar[10].style.width = "0%";
-//                 // timeSpan.innerHTML = "Game over";
-//                 timeSpan[10].innerHTML = "0" + "s";
-//             }
-//         }, 1000)
-//     })
-//     const checkColor = (width) =>{
-//         if(width>60){
-//             progressBar[10].style.background = "green";
-//         }
-//     }
-// }
-// function count12(){
-//     addEventListener('click', (e)=>{
-//         e.preventDefault();
-//         console.log('cool')
-//         let interval = 60;
-//         var countDown = setInterval(()=>{
-//             interval--;
-//             let progressWidth = interval / 60*100;
-//             if(interval > 0){
-//                 progressBar[11].style.width = progressWidth++ +"%";
-//                 timeSpan[11].innerHTML = interval + "s";
-//                 checkColor(progressWidth)
-//             }else{
-//                 clearInterval(countDown)
-//                 progressBar[11].style.width = "0%";
-//                 // timeSpan.innerHTML = "Game over";
-//                 timeSpan[11].innerHTML = "0" + "s";
-//             }
-//         }, 1000)
-//     })
-//     const checkColor = (width) =>{
-//         if(width>60){
-//             progressBar[11].style.background = "green";
-//         }
-//     }
-// }
-// function count13(){
-//     addEventListener('click', (e)=>{
-//         e.preventDefault();
-//         console.log('cool')
-//         let interval = 60;
-//         var countDown = setInterval(()=>{
-//             interval--;
-//             let progressWidth = interval / 60*100;
-//             if(interval > 0){
-//                 progressBar[12].style.width = progressWidth++ +"%";
-//                 timeSpan[12].innerHTML = interval + "s";
-//                 checkColor(progressWidth)
-//             }else{
-//                 clearInterval(countDown)
-//                 progressBar[12].style.width = "0%";
-//                 timeSpan[12].innerHTML = "0" + "s";
-//             }
-//         }, 1000)
-//     })
-//     const checkColor = (width) =>{
-//         if(width>60){
-//             progressBar[12].style.background = "green";
-//         }
-//     }
-// }
-// function count14(){
-//     addEventListener('click', (e)=>{
-//         e.preventDefault();
-//         console.log('cool')
-//         let interval = 60;
-//         var countDown = setInterval(()=>{
-//             interval--;
-//             let progressWidth = interval / 60*100;
-//             if(interval > 0){
-//                 progressBar[13].style.width = progressWidth++ +"%";
-//                 timeSpan[13].innerHTML = interval + "s";
-//                 checkColor(progressWidth)
-//             }else{
-//                 clearInterval(countDown)
-//                 progressBar[13].style.width = "0%";
-//                 timeSpan[13].innerHTML = "0" + "s";
-//             }
-//         }, 1000)
-//     })
-//     const checkColor = (width) =>{
-//         if(width>60){
-//             progressBar[13].style.background = "green";
-//         }
-//     }
-// }
-// function count15(){
-//     addEventListener('click', (e)=>{
-//         e.preventDefault();
-//         console.log('cool')
-//         let interval = 60;
-//         var countDown = setInterval(()=>{
-//             interval--;
-//             let progressWidth = interval / 60*100;
-//             if(interval > 0){
-//                 progressBar[14].style.width = progressWidth++ +"%";
-//                 timeSpan[14].innerHTML = interval + "s";
-//                 checkColor(progressWidth)
-//             }else{
-//                 clearInterval(countDown)
-//                 progressBar[14].style.width = "0%";
-//                 timeSpan[14].innerHTML = "0" + "s";
-//             }
-//         }, 1000)
-//     })
-//     const checkColor = (width) =>{
-//         if(width>60){
-//             progressBar[14].style.background = "green";
-//         }
-//     }
-// }
-
+// ###############################ACTIVER ET DESACTIVER##########################
+function activeB1(){
+    suivant1.removeAttribute('disabled')
+    suivant1.style.background = "blue";
+}
+response[0].addEventListener('click', (e)=>{
+    e.preventDefault();
+    activeB1();
+})
+// #######################################################################################
+function activeB2(){
+    suivant2.removeAttribute('disabled')
+    suivant2.style.background = "blue";
+}
+response[1].addEventListener('click', (e)=>{
+    e.preventDefault();
+    activeB2();
+})
+// #######################################################################################
+function activeB3(){
+    suivant3.removeAttribute('disabled')
+    suivant3.style.background = "blue";
+}
+response[2].addEventListener('click', (e)=>{
+    e.preventDefault();
+    activeB3();
+})
+// #######################################################################################
+function activeB4(){
+    suivant4.removeAttribute('disabled')
+    suivant4.style.background = "blue";
+}
+response[3].addEventListener('click', (e)=>{
+    e.preventDefault();
+    activeB4();
+})
+// #######################################################################################
+function activeB5(){
+    suivant5.removeAttribute('disabled')
+    suivant5.style.background = "blue";
+}
+response[4].addEventListener('click', (e)=>{
+    e.preventDefault();
+    activeB5();
+})
+// #######################################################################################
+function activeB6(){
+    suivant6.removeAttribute('disabled')
+    suivant6.style.background = "blue";
+}
+response[5].addEventListener('click', (e)=>{
+    e.preventDefault();
+    activeB6();
+})
+// #######################################################################################
+function activeB7(){
+    suivant7.removeAttribute('disabled')
+    suivant7.style.background = "blue";
+}
+response[6].addEventListener('click', (e)=>{
+    e.preventDefault();
+    activeB7();
+})
+// #######################################################################################
+function activeB8(){
+    suivant8.removeAttribute('disabled')
+    suivant8.style.background = "blue";
+}
+response[7].addEventListener('click', (e)=>{
+    e.preventDefault();
+    activeB8();
+})
+// #######################################################################################
+// #######################################################################################
+function activeB9(){
+    suivant9.removeAttribute('disabled')
+    suivant9.style.background = "blue";
+}
+response[8].addEventListener('click', (e)=>{
+    e.preventDefault();
+    activeB9();
+})
+// #######################################################################################
+function activeB10(){
+    suivant10.removeAttribute('disabled')
+    suivant10.style.background = "blue";
+}
+response[9].addEventListener('click', (e)=>{
+    e.preventDefault();
+    activeB10();
+})
+// #######################################################################################
+function activeB11(){
+    suivant11.removeAttribute('disabled')
+    suivant11.style.background = "blue";
+}
+response[10].addEventListener('click', (e)=>{
+    e.preventDefault();
+    activeB11();
+})
+// #######################################################################################
+function activeB12(){
+    suivant12.removeAttribute('disabled')
+    suivant12.style.background = "blue";
+}
+response[11].addEventListener('click', (e)=>{
+    e.preventDefault();
+    activeB12();
+})
+// #######################################################################################
+function activeB13(){
+    suivant13.removeAttribute('disabled')
+    suivant13.style.background = "blue";
+}
+response[12].addEventListener('click', (e)=>{
+    e.preventDefault();
+    activeB13();
+})
+// #######################################################################################
+function activeB14(){
+    suivant14.removeAttribute('disabled')
+    suivant14.style.background = "blue";
+}
+response[13].addEventListener('click', (e)=>{
+    e.preventDefault();
+    activeB14();
+})
+// #######################################################################################
+function activeB15(){
+    suivant15.removeAttribute('disabled')
+    suivant15.style.background = "blue";
+}
+response[14].addEventListener('click', (e)=>{
+    e.preventDefault();
+    activeB15();
+})
