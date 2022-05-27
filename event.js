@@ -562,14 +562,12 @@ function action(){
             return counter;
         }
         function suivantResPos(e){
-            
             e.preventDefault();
             console.log("La some vaut : " + resultat())
             let numPage = document.querySelector('.num-page');
             if(counter>7){
                 afQuest[15].style.display = "none";
                 afQuest[16].style.display = "block";
-                
             }
             else if(counter<8){
                 afQuest[15].style.display = "none";
