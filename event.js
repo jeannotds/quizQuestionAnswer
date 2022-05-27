@@ -558,9 +558,9 @@ function action(){
            }
             
         }
-        function resultat(){
-            return counter;
-        }
+        // function resultat(){
+        //     return counter;
+        // }
         function suivantResPos(e){
             e.preventDefault();
             console.log("La some vaut : " + resultat())
