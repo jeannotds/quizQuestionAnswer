@@ -575,5 +575,5 @@ function action(){
                 afQuest[17].style.display = "block";
             }
         }
-
+        console.log("ke suis")
         

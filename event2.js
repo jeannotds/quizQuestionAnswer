@@ -159,6 +159,7 @@ function activeB14(){
     suivant14.removeAttribute('disabled')
     suivant14.style.background = "blue";
 }
+////////////////////////////////////////////
 // #######################################################################################
 response[14].addEventListener('click', ()=>{
     activeB15();
