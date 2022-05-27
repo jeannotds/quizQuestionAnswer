@@ -45,19 +45,6 @@ suivant14.addEventListener('click',suivant_14);
 suivant15.addEventListener('click',suivantResPos);
 let quitter1 = document.querySelector('#quitter-1');
 
-
-let n = 10;
-let count = 0;
-
-if(n>11){
-    console.log(count += 1)
-}
-else{
-    console.log(count)
-}
-
-
-
 // ###############################ACTIVER ET DESACTIVER##########################
 
 response[0].addEventListener('click', ()=>{

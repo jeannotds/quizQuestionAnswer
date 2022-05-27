@@ -1,4 +1,5 @@
-
+let radioVal;
+let counter = 0;
 function action(){
     commencer.addEventListener('click', (e)=>{
         e.preventDefault();
@@ -16,10 +17,10 @@ function action(){
         e.preventDefault()
         index.style.display = "none";
         afQuest[1].style.display ="block";
-                let interval = 10;
+                let interval = 60;
                 countDown = setInterval(()=>{
                 interval--;
-                let progressWidth = interval / 10*100;
+                let progressWidth = interval / 60*100;
                 if(interval >= 0){
                     progressBar[0].style.width = progressWidth++ +"%";
                     timeSpan[0].innerHTML = interval + "s";
@@ -62,6 +63,17 @@ function action(){
                     e.preventDefault()
                  }
                },1000)
+               ////ACTIVATION RADIO ET COMPTAGE 1
+                let radios = document.querySelector('input[name="answer"]:checked');
+                if(radios){
+                    let val = radios.value;
+                    console.log(val);
+                    if(val === "kinshasa"){
+                        counter += 1;
+                        console.log(counter)
+                    }
+                }
+              
           }
 // #################################################################################################""
             function suivant_2(e){
@@ -89,6 +101,14 @@ function action(){
                         e.preventDefault();
                     }
                 }, 1000)
+               ////ACTIVATION RADIO ET COMPTAGE 2
+                let radios = document.querySelector('input[name="answer"]:checked');
+                let val = radios.value;
+                console.log(val);
+                if(val === "a"){
+                    counter += 1;
+                    console.log(counter)
+                }
             }
 // ########################################################################################################
         function suivant_3(e){
@@ -116,6 +136,14 @@ function action(){
                     e.preventDefault();
                 }
             }, 1000)
+               ////ACTIVATION RADIO ET COMPTAGE 3
+            let radios = document.querySelector('input[name="answer"]:checked');
+            let val = radios.value;
+            console.log(val);
+            if(val === "oui"){
+                counter += 1;
+                console.log(counter)
+            }
         }
         function suivant_4(e){
             e.preventDefault();
@@ -142,6 +170,14 @@ function action(){
                     e.preventDefault();
                 }
             }, 1000)
+               ////ACTIVATION RADIO ET COMPTAGE 4
+            let radios = document.querySelector('input[name="answer"]:checked');
+            let val = radios.value;
+            console.log(val);
+            if(val === "css"){
+                counter += 1;
+                console.log(counter)
+            }
         }
         function suivant_5(e){
             e.preventDefault();
@@ -168,6 +204,14 @@ function action(){
                     e.preventDefault();
                 }
             }, 1000)
+               ////ACTIVATION RADIO ET COMPTAGE 5
+            let radios = document.querySelector('input[name="answer"]:checked');
+            let val = radios.value;
+            console.log(val);
+            if(val === "java"){
+                counter += 1;
+                console.log(counter)
+            }
         }
         function suivant_6(e){
             e.preventDefault();
@@ -194,6 +238,14 @@ function action(){
                     e.preventDefault();
                 }
             }, 1000)
+               ////ACTIVATION RADIO ET COMPTAGE 6
+            let radios = document.querySelector('input[name="answer"]:checked');
+            let val = radios.value;
+            console.log(val);
+            if(val === "php"){
+                counter += 1;
+                console.log(counter)
+            }
         }
         function suivant_7(e){
             e.preventDefault();
@@ -220,6 +272,14 @@ function action(){
                     e.preventDefault();
                 }
             }, 1000)
+               ////ACTIVATION RADIO ET COMPTAGE 7
+            let radios = document.querySelector('input[name="answer"]:checked');
+            let val = radios.value;
+            console.log(val);
+            if(val === "c"){
+                counter += 1;
+                console.log(counter)
+            }
         }
         function suivant_8(e){
             e.preventDefault();
@@ -246,6 +306,14 @@ function action(){
                     e.preventDefault();
                 }
             }, 1000)
+               ////ACTIVATION RADIO ET COMPTAGE 8
+            let radios = document.querySelector('input[name="answer"]:checked');
+            let val = radios.value;
+            console.log(val);
+            if(val === "python"){
+                counter += 1;
+                console.log(counter)
+            }
         }
         function suivant_9(e){
             e.preventDefault();
@@ -272,6 +340,14 @@ function action(){
                     e.preventDefault();
                 }
             }, 1000)
+               ////ACTIVATION RADIO ET COMPTAGE 9
+            let radios = document.querySelector('input[name="answer"]:checked');
+            let val = radios.value;
+            console.log(val);
+            if(val === "action"){
+                counter += 1;
+                console.log(counter)
+            }
         }
         function suivant_10(e){
             e.preventDefault();
@@ -298,6 +374,14 @@ function action(){
                     e.preventDefault();
                 }
             }, 1000)
+               ////ACTIVATION RADIO ET COMPTAGE 10
+            let radios = document.querySelector('input[name="answer"]:checked');
+            let val = radios.value;
+            console.log(val);
+            if(val === "jeu"){
+                counter += 1;
+                console.log(counter)
+            }
         }
         function suivant_11(e){
             e.preventDefault();
@@ -324,6 +408,14 @@ function action(){
                     e.preventDefault();
                 }
             }, 1000)
+               ////ACTIVATION RADIO ET COMPTAGE 11
+            let radios = document.querySelector('input[name="answer"]:checked');
+            let val = radios.value;
+            console.log(val);
+            if(val === "vien"){
+                counter += 1;
+                console.log(counter)
+            }
         }
         function suivant_12(e){
             e.preventDefault();
@@ -350,6 +442,14 @@ function action(){
                     e.preventDefault();
                 }
             }, 1000)
+               ////ACTIVATION RADIO ET COMPTAGE 12
+            let radios = document.querySelector('input[name="answer"]:checked');
+            let val = radios.value;
+            console.log(val);
+            if(val === "non"){
+                counter += 1;
+                console.log(counter)
+            }
         }
         function suivant_13(e){
             e.preventDefault();
@@ -376,6 +476,14 @@ function action(){
                     e.preventDefault();
                 }
             }, 1000)
+               ////ACTIVATION RADIO ET COMPTAGE 13
+            let radios = document.querySelector('input[name="answer"]:checked');
+            let val = radios.value;
+            console.log(val);
+            if(val === "dom"){
+                counter += 1;
+                console.log(counter)
+            }
         }
         function suivant_14(e){
             e.preventDefault();
@@ -405,9 +513,21 @@ function action(){
                     console.log("fin")
                 }
             }, 1000)
+               ////ACTIVATION RADIO ET COMPTAGE 14
+            let radios = document.querySelector('input[name="answer"]:checked');
+            let val = radios.value;
+            console.log(val);
+            if(val === "bloc"){
+                counter += 1;
+            }
+            function resultat(){
+
+            }
         }
+
         function suivantResPos(e){
             afQuest[15].style.display = "none";
             afQuest[16].style.display = "block";
             e.preventDefault();
+            console.log("La some vaut : " +counter)
         }
