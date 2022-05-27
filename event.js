@@ -569,6 +569,11 @@ function action(){
                 afQuest[15].style.display = "none";
                 afQuest[16].style.display = "block";
             }
+            else if(counter<8){
+                // Erreu qui se passe
+                afQuest[15].style.display = "none";
+                afQuest[17].style.display = "block";
+            }
         }
 
         
