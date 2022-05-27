@@ -39,7 +39,7 @@ function action(){
     })
 }
       function suivant_1(e){
-               e.preventDefault() 
+               e.preventDefault()
                afQuest[1].style.display = 'none';
                afQuest[2].style.display = 'block';
                clearInterval(countDown);

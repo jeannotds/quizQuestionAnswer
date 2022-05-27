@@ -21,9 +21,13 @@ const timeSpan = document.querySelectorAll('.time');
 const progressBar = document.querySelectorAll('.progress-inner');
 const resAccueil = document.querySelector('#resAccueil');
 const echAccueil = document.querySelector('#echAccueil');
+//####################################################################"
+const btn = document.querySelectorAll('.btn');
+//####################################################################"
 let countDown = null
 action();
-const response = document.querySelectorAll('.response');
+let response = document.querySelectorAll('.selected');
+const input = document.querySelectorAll('input');
 suivant1.addEventListener('click',suivant_1)
 suivant2.addEventListener('click',suivant_2)
 suivant3.addEventListener('click',suivant_3);
@@ -41,139 +45,138 @@ suivant14.addEventListener('click',suivant_14);
 suivant15.addEventListener('click',suivantResPos);
 let quitter1 = document.querySelector('#quitter-1');
 
+
+let n = 10;
+let count = 0;
+
+if(n>11){
+    console.log(count += 1)
+}
+else{
+    console.log(count)
+}
+
+
+
 // ###############################ACTIVER ET DESACTIVER##########################
+
+response[0].addEventListener('click', ()=>{
+    activeB1()
+})
 function activeB1(){
     suivant1.removeAttribute('disabled')
     suivant1.style.background = "blue";
 }
-response[0].addEventListener('click', (e)=>{
-    e.preventDefault();
-    activeB1();
-})
 // #######################################################################################
+response[1].addEventListener('click', ()=>{
+    activeB2();
+})
 function activeB2(){
     suivant2.removeAttribute('disabled')
     suivant2.style.background = "blue";
 }
-response[1].addEventListener('click', (e)=>{
-    e.preventDefault();
-    activeB2();
-})
 // #######################################################################################
+response[2].addEventListener('click', ()=>{
+    activeB3();
+})
 function activeB3(){
     suivant3.removeAttribute('disabled')
     suivant3.style.background = "blue";
 }
-response[2].addEventListener('click', (e)=>{
-    e.preventDefault();
-    activeB3();
-})
 // #######################################################################################
+response[3].addEventListener('click', ()=>{
+    activeB4();
+})
 function activeB4(){
     suivant4.removeAttribute('disabled')
     suivant4.style.background = "blue";
 }
-response[3].addEventListener('click', (e)=>{
-    e.preventDefault();
-    activeB4();
-})
 // #######################################################################################
+response[4].addEventListener('click', ()=>{
+    activeB5();
+})
 function activeB5(){
     suivant5.removeAttribute('disabled')
     suivant5.style.background = "blue";
 }
-response[4].addEventListener('click', (e)=>{
-    e.preventDefault();
-    activeB5();
-})
 // #######################################################################################
+response[5].addEventListener('click', ()=>{
+    activeB6();
+})
 function activeB6(){
     suivant6.removeAttribute('disabled')
     suivant6.style.background = "blue";
 }
-response[5].addEventListener('click', (e)=>{
-    e.preventDefault();
-    activeB6();
-})
 // #######################################################################################
+response[6].addEventListener('click', ()=>{
+    activeB7();
+})
 function activeB7(){
     suivant7.removeAttribute('disabled')
     suivant7.style.background = "blue";
 }
-response[6].addEventListener('click', (e)=>{
-    e.preventDefault();
-    activeB7();
-})
 // #######################################################################################
+response[7].addEventListener('click', ()=>{
+    activeB8();
+})
 function activeB8(){
     suivant8.removeAttribute('disabled')
     suivant8.style.background = "blue";
 }
-response[7].addEventListener('click', (e)=>{
-    e.preventDefault();
-    activeB8();
+// #######################################################################################
+// #######################################################################################
+response[8].addEventListener('click', ()=>{
+    activeB9();
 })
-// #######################################################################################
-// #######################################################################################
 function activeB9(){
     suivant9.removeAttribute('disabled')
     suivant9.style.background = "blue";
 }
-response[8].addEventListener('click', (e)=>{
-    e.preventDefault();
-    activeB9();
-})
 // #######################################################################################
+response[9].addEventListener('click', ()=>{
+    activeB10();
+})
 function activeB10(){
     suivant10.removeAttribute('disabled')
     suivant10.style.background = "blue";
 }
-response[9].addEventListener('click', (e)=>{
-    e.preventDefault();
-    activeB10();
-})
 // #######################################################################################
+response[10].addEventListener('click', ()=>{
+    activeB11();
+})
 function activeB11(){
     suivant11.removeAttribute('disabled')
     suivant11.style.background = "blue";
 }
-response[10].addEventListener('click', (e)=>{
-    e.preventDefault();
-    activeB11();
-})
 // #######################################################################################
+response[11].addEventListener('click', ()=>{
+    activeB12();
+})
 function activeB12(){
     suivant12.removeAttribute('disabled')
     suivant12.style.background = "blue";
 }
-response[11].addEventListener('click', (e)=>{
-    e.preventDefault();
-    activeB12();
-})
 // #######################################################################################
+response[12].addEventListener('click', ()=>{
+    activeB13();
+})
 function activeB13(){
     suivant13.removeAttribute('disabled')
     suivant13.style.background = "blue";
 }
-response[12].addEventListener('click', (e)=>{
-    e.preventDefault();
-    activeB13();
-})
 // #######################################################################################
+response[13].addEventListener('click', ()=>{
+    activeB14();
+})
 function activeB14(){
     suivant14.removeAttribute('disabled')
     suivant14.style.background = "blue";
 }
-response[13].addEventListener('click', (e)=>{
-    e.preventDefault();
-    activeB14();
-})
 // #######################################################################################
+response[14].addEventListener('click', ()=>{
+    activeB15();
+})
 function activeB15(){
     suivant15.removeAttribute('disabled')
     suivant15.style.background = "blue";
 }
-response[14].addEventListener('click', (e)=>{
-    e.preventDefault();
-    activeB15();
-})
