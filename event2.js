@@ -16,6 +16,23 @@ let suivant12 = document.querySelector('#suivant-12');
 let suivant13 = document.querySelector('#suivant-13');
 let suivant14 = document.querySelector('#suivant-14');
 let suivant15 = document.querySelector('#suivant-15');
+/////////////////////////////////////////////////////////////
+let quite1 = document.querySelector('#quitter-1');
+let quite2 = document.querySelector('#quitter-2');
+let quite3 = document.querySelector('#quitter-3');
+let quite4 = document.querySelector('#quitter-4');
+let quite5 = document.querySelector('#quitter-5');
+let quite6 = document.querySelector('#quitter-6');
+let quite7 = document.querySelector('#quitter-7');
+let quite8 = document.querySelector('#quitter-8');
+let quite9 = document.querySelector('#quitter-9');
+let quite10 = document.querySelector('#quitter-10');
+let quite11 = document.querySelector('#quitter-11');
+let quite12 = document.querySelector('#quitter-12');
+let quite13 = document.querySelector('#quitter-13');
+let quite14 = document.querySelector('#quitter-14');
+let quite15 = document.querySelector('#quitter-15');
+//////////////////////////////////////////////////////////
 const btnStart = document.querySelector('.btn-start');
 const timeSpan = document.querySelectorAll('.time');
 const progressBar = document.querySelectorAll('.progress-inner');
@@ -179,6 +196,7 @@ function activeB15(){
 // ###################################################################################"#######"
 resAccueils()
 echAccueils()
+////RESULTAT QUITER POUR ACCUEIL
 function resAccueils(){
         resAccueil.addEventListener('click', ()=>{
         console.log("Autre somme" +resultat())
@@ -198,5 +216,397 @@ function resultat(){
 }
 resultat()
 
-// numNeg.textContent = resultat();
-// numPos.textContent = resultat();
+///QUIITER LE PROGRAMME 1
+quittre_1();
+function quittre_1(){
+    quite1.addEventListener('click', (e)=>{
+        clearInterval(countDown);
+        countDown == null
+        afQuest[1].style.display = "none";
+        if(counter<8){
+            afQuest[17].style.display = "block";
+        }
+    })
+    echAccueils()
+}
+
+
+///QUIITER LE PROGRAMME 2
+quittre_2();
+function quittre_2(){
+    quite2.addEventListener('click', (e)=>{
+        clearInterval(countDown);
+        countDown == null
+        afQuest[2].style.display = "none";
+        if(counter<8){
+            afQuest[17].style.display = "block";
+            numNeg.textContent = counter;
+            numPos.textContent = counter;
+        }
+    })
+    echAccueils()
+}
+///QUIITER LE PROGRAMME 3
+quittre_3();
+function quittre_3(){
+    quite3.addEventListener('click', (e)=>{
+        clearInterval(countDown);
+        countDown == null
+        afQuest[3].style.display = "none";
+        if(counter<8){
+            afQuest[17].style.display = "block";
+            numNeg.textContent = counter;
+            numPos.textContent = counter;
+        }
+    })
+    echAccueils()
+}
+///QUIITER LE PROGRAMME 4
+quittre_4();
+function quittre_4(){
+    quite4.addEventListener('click', (e)=>{
+        e.preventDefault();
+        clearInterval(countDown);
+        countDown == null
+        afQuest[4].style.display = "none";
+        if(counter<8){
+            afQuest[17].style.display = "block";
+            numNeg.textContent = counter;
+            numPos.textContent = counter;
+        }
+    })
+    echAccueils()
+}
+
+///QUIITER LE PROGRAMME 5
+quittre_5();
+function quittre_5(){
+    quite5.addEventListener('click', (e)=>{
+        e.preventDefault();
+        clearInterval(countDown);
+        countDown == null
+        afQuest[5].style.display = "none";
+        if(counter<8){
+            afQuest[17].style.display = "block";
+            numNeg.textContent = counter;
+            numPos.textContent = counter;
+        }
+    })
+    echAccueil.addEventListener('click', ()=>{
+        console.log("rejouer reussi")
+        afQuest[17].style.display = "none";
+        index.style.display = "block";
+        numNeg.textContent = counter;
+        numPos.textContent = counter;
+    })    
+}
+///QUIITER LE PROGRAMME 6
+quittre_6();
+function quittre_6(){
+    quite6.addEventListener('click', (e)=>{
+        e.preventDefault();
+        clearInterval(countDown);
+        countDown == null
+        afQuest[6].style.display = "none";
+        if(counter<8){
+            afQuest[17].style.display = "block";
+            numNeg.textContent = counter;
+            numPos.textContent = counter;
+        }
+    })
+    echAccueil.addEventListener('click', ()=>{
+        console.log("rejouer reussi")
+        afQuest[17].style.display = "none";
+        index.style.display = "block";
+        numNeg.textContent = counter;
+        numPos.textContent = counter;
+    })
+}
+///QUIITER LE PROGRAMME 7
+quittre_7();
+function quittre_7(){
+    quite7.addEventListener('click', (e)=>{
+        e.preventDefault();
+        clearInterval(countDown);
+        countDown == null
+        afQuest[7].style.display = "none";
+        if(counter<8){
+            afQuest[17].style.display = "block";
+            numNeg.textContent = counter;
+            numPos.textContent = counter;
+        }
+    })
+    echAccueil.addEventListener('click', ()=>{
+        console.log("rejouer reussi")
+        afQuest[17].style.display = "none";
+        index.style.display = "block";
+        numNeg.textContent = counter;
+        numPos.textContent = counter;
+    })
+}
+///QUIITER LE PROGRAMME 7
+quittre_8();
+function quittre_8(){
+    quite8.addEventListener('click', (e)=>{
+        e.preventDefault();
+        clearInterval(countDown);
+        countDown == null
+        afQuest[8].style.display = "none";
+        if(counter<8){
+            afQuest[17].style.display = "block";
+            numNeg.textContent = counter;
+            numPos.textContent = counter;
+        }
+        else{
+            afQuest[16].style.display = "block";
+            numNeg.textContent = counter;
+            numPos.textContent = counter;
+        }
+    })
+    echAccueil.addEventListener('click', ()=>{
+        console.log("rejouer reussi")
+        afQuest[17].style.display = "none";
+        index.style.display = "block";
+        numNeg.textContent = counter;
+        numPos.textContent = counter;
+    })
+    resAccueil.addEventListener('click', ()=>{
+        console.log("rejouer reussi")
+        afQuest[16].style.display = "none";
+        index.style.display = "block";
+        numNeg.textContent = counter;
+        numPos.textContent = counter;
+    })
+}
+///QUIITER LE PROGRAMME 9
+quittre_9();
+function quittre_9(){
+    quite9.addEventListener('click', (e)=>{
+        e.preventDefault();
+        clearInterval(countDown);
+        countDown == null
+        afQuest[9].style.display = "none";
+        if(counter<8){
+            afQuest[17].style.display = "block";
+            numNeg.textContent = counter;
+            numPos.textContent = counter;
+        }
+        else{
+            afQuest[16].style.display = "block";
+            numNeg.textContent = counter;
+            numPos.textContent = counter;
+        }
+    })
+    echAccueil.addEventListener('click', ()=>{
+        console.log("rejouer reussi")
+        afQuest[17].style.display = "none";
+        index.style.display = "block";
+        numNeg.textContent = counter;
+        numPos.textContent = counter;
+    })
+    resAccueil.addEventListener('click', ()=>{
+        console.log("rejouer reussi")
+        afQuest[6].style.display = "none";
+        index.style.display = "block";
+        numNeg.textContent = counter;
+        numPos.textContent = counter;
+    })
+}
+///QUIITER LE PROGRAMME 10
+quittre_10();
+function quittre_10(){
+    quite10.addEventListener('click', (e)=>{
+        e.preventDefault();
+        clearInterval(countDown);
+        countDown == null
+        afQuest[10].style.display = "none";
+        if(counter<8){
+            afQuest[17].style.display = "block";
+            numNeg.textContent = counter;
+            numPos.textContent = counter;
+        }
+        else{
+            afQuest[16].style.display = "block";
+            numNeg.textContent = counter;
+            numPos.textContent = counter;
+        }
+    })
+    echAccueil.addEventListener('click', ()=>{
+        console.log("rejouer reussi")
+        afQuest[17].style.display = "none";
+        index.style.display = "block";
+        numNeg.textContent = counter;
+        numPos.textContent = counter;
+    })
+    echAccueil.addEventListener('click', ()=>{
+        console.log("rejouer reussi")
+        afQuest[16].style.display = "none";
+        index.style.display = "block";
+        numNeg.textContent = counter;
+        numPos.textContent = counter;
+    })
+}
+///QUIITER LE PROGRAMME 11
+quittre_11();
+function quittre_11(){
+    quite11.addEventListener('click', (e)=>{
+        e.preventDefault();
+        clearInterval(countDown);
+        countDown == null
+        afQuest[11].style.display = "none";
+        if(counter<8){
+            afQuest[17].style.display = "block";
+            numNeg.textContent = counter;
+            numPos.textContent = counter;
+        }
+    })
+    echAccueil.addEventListener('click', ()=>{
+        console.log("rejouer reussi")
+        afQuest[17].style.display = "none";
+        index.style.display = "block";
+        numNeg.textContent = counter;
+        numPos.textContent = counter;
+    })
+}
+///QUIITER LE PROGRAMME 12
+quittre_12();
+function quittre_12(){
+    quite12.addEventListener('click', (e)=>{
+        e.preventDefault();
+        clearInterval(countDown);
+        countDown == null
+        afQuest[12].style.display = "none";
+        if(counter<8){
+            afQuest[17].style.display = "block";
+            numNeg.textContent = counter;
+            numPos.textContent = counter;
+        }
+        else{
+            afQuest[16].style.display = "block";
+            numNeg.textContent = counter;
+            numPos.textContent = counter;
+        }
+    })
+    echAccueil.addEventListener('click', ()=>{
+        console.log("rejouer reussi")
+        afQuest[17].style.display = "none";
+        index.style.display = "block";
+        numNeg.textContent = counter;
+        numPos.textContent = counter;
+    })
+    echAccueil.addEventListener('click', ()=>{
+        console.log("rejouer reussi")
+        afQuest[16].style.display = "none";
+        index.style.display = "block";
+        numNeg.textContent = counter;
+        numPos.textContent = counter;
+    })
+}
+///QUIITER LE PROGRAMME 13
+quittre_13();
+function quittre_13(){
+    quite13.addEventListener('click', (e)=>{
+        e.preventDefault();
+        clearInterval(countDown);
+        countDown == null
+        afQuest[13].style.display = "none";
+        if(counter<8){
+            afQuest[17].style.display = "block";
+            numNeg.textContent = counter;
+            numPos.textContent = counter;
+        }
+        else{
+            afQuest[16].style.display = "block";
+            numNeg.textContent = counter;
+            numPos.textContent = counter;
+        }
+    })
+    echAccueil.addEventListener('click', ()=>{
+        console.log("rejouer reussi")
+        afQuest[17].style.display = "none";
+        index.style.display = "block";
+        numNeg.textContent = counter;
+        numPos.textContent = counter;
+    })
+    echAccueil.addEventListener('click', ()=>{
+        console.log("rejouer reussi")
+        afQuest[16].style.display = "none";
+        index.style.display = "block";
+        numNeg.textContent = counter;
+        numPos.textContent = counter;
+    })
+}
+///QUIITER LE PROGRAMME 14
+quittre_14();
+function quittre_14(){
+    quite14.addEventListener('click', (e)=>{
+        e.preventDefault();
+        clearInterval(countDown);
+        countDown == null
+        afQuest[14].style.display = "none";
+        if(counter<8){
+            afQuest[17].style.display = "block";
+            numNeg.textContent = counter;
+            numPos.textContent = counter;
+        }
+        else{
+            afQuest[16].style.display = "block";
+            numNeg.textContent = counter;
+            numPos.textContent = counter;
+        }
+    })
+    echAccueil.addEventListener('click', ()=>{
+        console.log("rejouer reussi")
+        afQuest[17].style.display = "none";
+        index.style.display = "block";
+        numNeg.textContent = counter;
+        numPos.textContent = counter;
+    })
+    echAccueil.addEventListener('click', ()=>{
+        console.log("rejouer reussi")
+        afQuest[16].style.display = "none";
+        index.style.display = "block";
+        numNeg.textContent = counter;
+        numPos.textContent = counter;
+    })
+
+}
+///QUIITER LE PROGRAMME 15
+quittre_15();
+function quittre_15(){
+    quite15.addEventListener('click', (e)=>{
+        e.preventDefault();
+        clearInterval(countDown);
+        countDown == null
+        afQuest[15].style.display = "none";
+        if(counter<8){
+            afQuest[17].style.display = "block";
+            numNeg.textContent = counter;
+            numPos.textContent = counter;
+        }
+        else{
+            afQuest[16].style.display = "block";
+            numNeg.textContent = counter;
+            numPos.textContent = counter;
+        }
+    })
+    echAccueil.addEventListener('click', ()=>{
+        console.log("rejouer reussi")
+        afQuest[17].style.display = "none";
+        index.style.display = "block";
+        numNeg.textContent = counter;
+        numPos.textContent = counter;
+    })
+    echAccueil.addEventListener('click', ()=>{
+        console.log("rejouer reussi")
+        afQuest[16].style.display = "none";
+        index.style.display = "block";
+        numNeg.textContent = counter;
+        numPos.textContent = counter;
+    })
+}
+
+
+
+
+

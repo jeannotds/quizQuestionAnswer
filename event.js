@@ -32,7 +32,7 @@ function action(){
                 if(interval >= 0){
                     progressBar[0].style.width = progressWidth++ +"%";
                     timeSpan[0].innerHTML = interval + "s";
-                }   
+                }  
                 progressBar[0].style.width = progressWidth++ +"%";
                 timeSpan[0].innerHTML = interval + "s";
                  if (interval == 0) {
@@ -48,6 +48,7 @@ function action(){
     })
 }
       function suivant_1(e){
+
                e.preventDefault()
                afQuest[1].style.display = 'none';
                afQuest[2].style.display = 'block';
@@ -543,7 +544,7 @@ function action(){
                     afQuest[15].style.display = "none";
                     //DIRECTION
                     suivant15.click();
-                    // activeB15();
+                    activeB15();
                     console.log("fin")
                 }
             }, 1000)
@@ -573,16 +574,14 @@ function action(){
                  if(val === "big"){
                      counter += 1;
                      console.log("somme = " + counter)
-                     if(counter<8){
-                        console.log("vous avez echoué")
-                     }
-                     else{
-                         console.log('vous avez reussi')
-                     }
+                    //  if(counter<8){
+                    //     console.log("vous avez echoué")
+                    //  }
+                    //  else{
+                    //      console.log('vous avez reussi')
+                    //  }
                  }
             } 
             numNeg.textContent = counter;
             numPos.textContent = counter;
         }
-
-        
