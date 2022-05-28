@@ -461,7 +461,6 @@ function action(){
                 progressBar[12].style.width = progressWidth++ +"%";
                 timeSpan[12].innerHTML = interval + "s";
                 if(interval == 0){
-                    console.log("page3ayto")
                     afQuest[13].style.display = "none";
                     afQuest[14].style.display = "block";
                     activeB13()
@@ -498,7 +497,6 @@ function action(){
                 progressBar[13].style.width = progressWidth++ +"%";
                 timeSpan[13].innerHTML = interval + "s";
                 if(interval == 0){
-                    console.log("page3ayto")
                     afQuest[14].style.display = "none";
                     afQuest[15].style.display = "block";
                     activeB14()
@@ -523,57 +521,125 @@ function action(){
             afQuest[14].style.display = "none";
             afQuest[15].style.display = "block";
             clearInterval(countDown);
-            countDown = null;
+            countDown =null;
             let interval = 10;
-            countDown = setInterval(()=>{
+            countDown =  setInterval(()=>{
                 interval--;
                 let progressWidth = interval / 10*100;
                 if(interval >= 0){
-                    progressBar[14].style.width = progressWidth++ +"%";
-                    timeSpan[14].innerHTML = interval;
+                    progressBar[14].style.width = progressWidth++ + "%";
+                    timeSpan[14].innerHTML = interval +"s";
                 }
-                progressBar[14].style.width = progressWidth++ +"%";
-                timeSpan[14].innerHTML = interval + "s";
-                if(interval == 0){
+                if(interval === 0){
                     e.preventDefault();
                     afQuest[15].style.display = "none";
                     afQuest[16].style.display = "block";
-                    // SI LE RESULTAT EST SUP A 7
+                    //DIRECTION
                     suivant15.click();
-                    //SINON
-                    activeB15()
-                    e.preventDefault();
+                    // activeB15();
                     console.log("fin")
                 }
             }, 1000)
-               ////ACTIVATION RADIO ET COMPTAGE 14
+             ////ACTIVATION RADIO ET COMPTAGE 14
             let radios = document.querySelector('input[name="answer"]:checked');
-           
-           if(radios){
-            let val = radios.value;
-            console.log(val);
-            if(val === "bloc"){
-                counter += 1;
-            }
-           }
-            
+            if(radios){
+                let val = radios.value;
+                console.log(val);
+                if(val === "bloc"){
+                    counter += 1;
+                    console.log("somme = " + counter)
+                }
+              }
         }
-        function resultat(){
-            return counter;
-        }
-        function suivantResPos(e){
+        /////////SUIVANT 15
+        function suivant_15(e){
+            afQuest[15].style.display = "none";
+            afQuest[16].style.display = "block";
+            clearInterval(countDown);
+            countDown == null
             e.preventDefault();
-            console.log("La some vaut : " + resultat())
-            let numPage = document.querySelector('.num-page');
-            if(counter>7){
-                afQuest[15].style.display = "none";
-                afQuest[16].style.display = "block";
-            }
-            else if(counter<8){
-                // Erreu qui se passe
-                afQuest[15].style.display = "none";
-                afQuest[17].style.display = "block";
-            }
+             ////ACTIVATION RADIO ET COMPTAGE 15
+             let radios = document.querySelector('input[name="answer"]:checked');
+             if(radios){
+                 let val = radios.value;
+                 console.log(val);
+                 if(val === "big"){
+                     counter += 1;
+                     console.log("somme = " + counter)
+                 }
+               }
+            
+            // let radios = document.querySelector('inresAccueilput[name="answer"]:checked');
+            // if(radios){
+            //     let val = radios.value;
+            //     console.log(val);
+            //     if(val === "big"){
+            //         counter += 1;
+            //         console.log(counter)
+            //     }
+            //   }
+            //   console.log("salut")
+            //   afQuest[15].style.display = "none";
+            //   afQuest[15].style.display = "block";
+        //     e.preventDefault();
+        //     afQuest[14].style.display = "none";
+        //     afQuest[15].style.display = "block";
+        //     clearInterval(countDown);
+        //     countDown = null;
+        //     let interval = 60;
+        //     countDown = setInterval(()=>{
+        //         interval--;
+        //         let progressWidth = interval / 60*100;
+        //         if(interval >= 0){
+        //             progressBar[14].style.width = progressWidth++ +"%";
+        //             timeSpan[14].innerHTML = interval;
+        //         }
+        //         progressBar[14].style.width = progressWidth++ +"%";
+        //         timeSpan[14].innerHTML = interval + "s";
+        //         if(interval == 0){
+        //             e.preventDefault();
+        //             afQuest[15].style.display = "none";
+        //             afQuest[16].style.display = "block";
+        //             suivant15.click();
+        //             activeB15()
+        //             e.preventDefault();
+        //             console.log("fin")
+        //         }
+        //     }, 1000)
+        //        ////ACTIVATION RADIO ET COMPTAGE 14
+        //     let radios = document.querySelector('input[name="answer"]:checked');
+        //    if(radios){
+        //     let val = radios.value;
+        //     console.log(val);
+        //     if(val === "bloc"){
+        //         counter += 1;
+        //     }
+        //    }
         }
-        console.log("ke suis")
-        
+
+
+
+
+
+   
+        function suivantResPos(e){
+            
+            e.preventDefault();
+            // console.log("La some vaut : " + resultat())
+            // let numPage = document.querySelector('.num-page');
+            // if(counter>7){
+            //     afQuest[15].style.display = "none";
+            //     afQuest[16].style.display = "block";
+                
+            // }
+            // else if(counter<8){
+            //     afQuest[15].style.display = "none";
+            //     afQuest[17].style.display = "block";
+            // }
+        }
+        // console.log("La somme vaut : " + counter)
+
+             
+        // function resultat(){
+        //     return counter;
+        // }

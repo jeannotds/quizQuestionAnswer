@@ -42,7 +42,7 @@ suivant11.addEventListener('click',suivant_11);
 suivant12.addEventListener('click',suivant_12);
 suivant13.addEventListener('click',suivant_13);
 suivant14.addEventListener('click',suivant_14);
-suivant15.addEventListener('click',suivantResPos);
+suivant15.addEventListener('click',suivant_15);
 let quitter1 = document.querySelector('#quitter-1');
 
 // ###############################ACTIVER ET DESACTIVER##########################
@@ -159,7 +159,6 @@ function activeB14(){
     suivant14.removeAttribute('disabled')
     suivant14.style.background = "blue";
 }
-////////////////////////////////////////////
 // #######################################################################################
 response[14].addEventListener('click', ()=>{
     activeB15();
