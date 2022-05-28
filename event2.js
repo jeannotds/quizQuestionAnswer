@@ -226,8 +226,20 @@ function quittre_1(){
         if(counter<8){
             afQuest[17].style.display = "block";
         }
+        else{
+            afQuest[16].style.display = "block";
+            numNeg.textContent = counter;
+            numPos.textContent = counter;
+        }
     })
     echAccueils()
+    echAccueil.addEventListener('click', ()=>{
+        console.log("rejouer reussi")
+        afQuest[16].style.display = "none";
+        index.style.display = "block";
+        numNeg.textContent = counter;
+        numPos.textContent = counter;
+    })
 }
 
 
@@ -243,8 +255,20 @@ function quittre_2(){
             numNeg.textContent = counter;
             numPos.textContent = counter;
         }
+        else{
+            afQuest[16].style.display = "block";
+            numNeg.textContent = counter;
+            numPos.textContent = counter;
+        }
     })
     echAccueils()
+    echAccueil.addEventListener('click', ()=>{
+        console.log("rejouer reussi")
+        afQuest[16].style.display = "none";
+        index.style.display = "block";
+        numNeg.textContent = counter;
+        numPos.textContent = counter;
+    })
 }
 ///QUIITER LE PROGRAMME 3
 quittre_3();
@@ -258,8 +282,21 @@ function quittre_3(){
             numNeg.textContent = counter;
             numPos.textContent = counter;
         }
+        else{
+            afQuest[16].style.display = "block";
+            numNeg.textContent = counter;
+            numPos.textContent = counter;
+        }
+        
     })
     echAccueils()
+    echAccueil.addEventListener('click', ()=>{
+        console.log("rejouer reussi")
+        afQuest[16].style.display = "none";
+        index.style.display = "block";
+        numNeg.textContent = counter;
+        numPos.textContent = counter;
+    })
 }
 ///QUIITER LE PROGRAMME 4
 quittre_4();
@@ -274,8 +311,20 @@ function quittre_4(){
             numNeg.textContent = counter;
             numPos.textContent = counter;
         }
+        else{
+            afQuest[16].style.display = "block";
+            numNeg.textContent = counter;
+            numPos.textContent = counter;
+        }
     })
     echAccueils()
+    echAccueil.addEventListener('click', ()=>{
+        console.log("rejouer reussi")
+        afQuest[16].style.display = "none";
+        index.style.display = "block";
+        numNeg.textContent = counter;
+        numPos.textContent = counter;
+    })
 }
 
 ///QUIITER LE PROGRAMME 5
@@ -291,6 +340,11 @@ function quittre_5(){
             numNeg.textContent = counter;
             numPos.textContent = counter;
         }
+        else{
+            afQuest[16].style.display = "block";
+            numNeg.textContent = counter;
+            numPos.textContent = counter;
+        }
     })
     echAccueil.addEventListener('click', ()=>{
         console.log("rejouer reussi")
@@ -299,6 +353,13 @@ function quittre_5(){
         numNeg.textContent = counter;
         numPos.textContent = counter;
     })    
+    echAccueil.addEventListener('click', ()=>{
+        console.log("rejouer reussi")
+        afQuest[16].style.display = "none";
+        index.style.display = "block";
+        numNeg.textContent = counter;
+        numPos.textContent = counter;
+    })  
 }
 ///QUIITER LE PROGRAMME 6
 quittre_6();
@@ -313,10 +374,22 @@ function quittre_6(){
             numNeg.textContent = counter;
             numPos.textContent = counter;
         }
+        else{
+            afQuest[16].style.display = "block";
+            numNeg.textContent = counter;
+            numPos.textContent = counter;
+        }
     })
     echAccueil.addEventListener('click', ()=>{
         console.log("rejouer reussi")
         afQuest[17].style.display = "none";
+        index.style.display = "block";
+        numNeg.textContent = counter;
+        numPos.textContent = counter;
+    })
+    echAccueil.addEventListener('click', ()=>{
+        console.log("rejouer reussi")
+        afQuest[16].style.display = "none";
         index.style.display = "block";
         numNeg.textContent = counter;
         numPos.textContent = counter;
@@ -335,10 +408,22 @@ function quittre_7(){
             numNeg.textContent = counter;
             numPos.textContent = counter;
         }
+        else{
+            afQuest[16].style.display = "block";
+            numNeg.textContent = counter;
+            numPos.textContent = counter;
+        }
     })
     echAccueil.addEventListener('click', ()=>{
         console.log("rejouer reussi")
         afQuest[17].style.display = "none";
+        index.style.display = "block";
+        numNeg.textContent = counter;
+        numPos.textContent = counter;
+    })
+    echAccueil.addEventListener('click', ()=>{
+        console.log("rejouer reussi")
+        afQuest[16].style.display = "none";
         index.style.display = "block";
         numNeg.textContent = counter;
         numPos.textContent = counter;
@@ -459,10 +544,22 @@ function quittre_11(){
             numNeg.textContent = counter;
             numPos.textContent = counter;
         }
+        else{
+            afQuest[16].style.display = "block";
+            numNeg.textContent = counter;
+            numPos.textContent = counter;
+        }
     })
     echAccueil.addEventListener('click', ()=>{
         console.log("rejouer reussi")
         afQuest[17].style.display = "none";
+        index.style.display = "block";
+        numNeg.textContent = counter;
+        numPos.textContent = counter;
+    })
+    echAccueil.addEventListener('click', ()=>{
+        console.log("rejouer reussi")
+        afQuest[16].style.display = "none";
         index.style.display = "block";
         numNeg.textContent = counter;
         numPos.textContent = counter;
@@ -605,8 +702,3 @@ function quittre_15(){
         numPos.textContent = counter;
     })
 }
-
-
-
-
-

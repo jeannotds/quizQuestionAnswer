@@ -82,7 +82,6 @@ function action(){
                         console.log(counter)
                     }
                 }
-              
           }
 // #################################################################################################""
             function suivant_2(e){
@@ -562,7 +561,6 @@ function action(){
         /////////SUIVANT 15
         function suivant_15(e){
             afQuest[15].style.display = "none";
-            afQuest[16].style.display = "block";
             clearInterval(countDown);
             countDown == null
             e.preventDefault();
@@ -574,14 +572,16 @@ function action(){
                  if(val === "big"){
                      counter += 1;
                      console.log("somme = " + counter)
-                    //  if(counter<8){
-                    //     console.log("vous avez echoué")
-                    //  }
-                    //  else{
-                    //      console.log('vous avez reussi')
-                    //  }
                  }
             } 
+                if(counter<8){
+                console.log("vous avez echoué")
+                afQuest[17].style.display = "block";
+                }
+                else{
+                    console.log('vous avez reussi')
+                    afQuest[16].style.display = "block";
+                }
             numNeg.textContent = counter;
             numPos.textContent = counter;
         }
