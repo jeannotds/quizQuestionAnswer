@@ -23,7 +23,16 @@ const resAccueil = document.querySelector('#resAccueil');
 const echAccueil = document.querySelector('#echAccueil');
 //####################################################################"
 const btn = document.querySelectorAll('.btn');
+let numPos = document.querySelector('.num-pagepos');
+let numNeg = document.querySelector('.num-pageneg');
+let nomJoueurPos = document.querySelector('.nom-joueurPos');
+let emailJoueurPos = document.querySelector('.email-joueurPos');
+let nomJoueurNeg = document.querySelector('.nom-joueurpos');
+let emailJoueurNeg = document.querySelector('.email-joueurpos');
 //####################################################################"
+let nomJoueur = document.querySelectorAll(".nom-joueur")
+let emailJoueur = document.querySelectorAll(".email-joueur")
+// ######################################################################""
 let countDown = null
 action();
 let response = document.querySelectorAll('.selected');
@@ -167,3 +176,27 @@ function activeB15(){
     suivant15.removeAttribute('disabled')
     suivant15.style.background = "blue";
 }
+// ###################################################################################"#######"
+resAccueils()
+echAccueils()
+function resAccueils(){
+        resAccueil.addEventListener('click', ()=>{
+        console.log("Autre somme" +resultat())
+        afQuest[16].style.display = "none";
+        index.style.display = "block";
+    })
+}
+function echAccueils(){
+        echAccueil.addEventListener('click', ()=>{
+        console.log("rejouer reussi")
+        afQuest[16].style.display = "none";
+        index.style.display = "block";
+    })
+}
+function resultat(){
+    return counter
+}
+resultat()
+
+// numNeg.textContent = resultat();
+// numPos.textContent = resultat();

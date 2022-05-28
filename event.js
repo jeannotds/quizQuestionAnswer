@@ -5,9 +5,17 @@ function action(){
         e.preventDefault();
         let nom = document.querySelector('#nom').value;
         let email = document.querySelector('#email').value;
+        console.log(nom)
+        console.log(email)
         let erreurNom = document.querySelector('#erreur-nom');
         let erreurEmail = document.querySelector('#erreur-email');
         let erreurE;
+
+        nomJoueur[0].textContent = nom;
+        nomJoueur[1].textContent = nom;
+        emailJoueur[0].textContent = email;
+        emailJoueur[1].textContent = email;
+
         if(!nom && !email){
             erreurE = "Entrer votre nom";
             e.preventDefault();
@@ -533,7 +541,6 @@ function action(){
                 if(interval === 0){
                     e.preventDefault();
                     afQuest[15].style.display = "none";
-                    afQuest[16].style.display = "block";
                     //DIRECTION
                     suivant15.click();
                     // activeB15();
@@ -566,80 +573,16 @@ function action(){
                  if(val === "big"){
                      counter += 1;
                      console.log("somme = " + counter)
+                     if(counter<8){
+                        console.log("vous avez echoué")
+                     }
+                     else{
+                         console.log('vous avez reussi')
+                     }
                  }
-               }
-            
-            // let radios = document.querySelector('inresAccueilput[name="answer"]:checked');
-            // if(radios){
-            //     let val = radios.value;
-            //     console.log(val);
-            //     if(val === "big"){
-            //         counter += 1;
-            //         console.log(counter)
-            //     }
-            //   }
-            //   console.log("salut")
-            //   afQuest[15].style.display = "none";
-            //   afQuest[15].style.display = "block";
-        //     e.preventDefault();
-        //     afQuest[14].style.display = "none";
-        //     afQuest[15].style.display = "block";
-        //     clearInterval(countDown);
-        //     countDown = null;
-        //     let interval = 60;
-        //     countDown = setInterval(()=>{
-        //         interval--;
-        //         let progressWidth = interval / 60*100;
-        //         if(interval >= 0){
-        //             progressBar[14].style.width = progressWidth++ +"%";
-        //             timeSpan[14].innerHTML = interval;
-        //         }
-        //         progressBar[14].style.width = progressWidth++ +"%";
-        //         timeSpan[14].innerHTML = interval + "s";
-        //         if(interval == 0){
-        //             e.preventDefault();
-        //             afQuest[15].style.display = "none";
-        //             afQuest[16].style.display = "block";
-        //             suivant15.click();
-        //             activeB15()
-        //             e.preventDefault();
-        //             console.log("fin")
-        //         }
-        //     }, 1000)
-        //        ////ACTIVATION RADIO ET COMPTAGE 14
-        //     let radios = document.querySelector('input[name="answer"]:checked');
-        //    if(radios){
-        //     let val = radios.value;
-        //     console.log(val);
-        //     if(val === "bloc"){
-        //         counter += 1;
-        //     }
-        //    }
+            } 
+            numNeg.textContent = counter;
+            numPos.textContent = counter;
         }
 
-
-
-
-
-   
-        function suivantResPos(e){
-            
-            e.preventDefault();
-            // console.log("La some vaut : " + resultat())
-            // let numPage = document.querySelector('.num-page');
-            // if(counter>7){
-            //     afQuest[15].style.display = "none";
-            //     afQuest[16].style.display = "block";
-                
-            // }
-            // else if(counter<8){
-            //     afQuest[15].style.display = "none";
-            //     afQuest[17].style.display = "block";
-            // }
-        }
-        // console.log("La somme vaut : " + counter)
-
-             
-        // function resultat(){
-        //     return counter;
-        // }
+        

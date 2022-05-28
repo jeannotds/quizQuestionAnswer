@@ -255,3 +255,6 @@ input[type="email"]:hover{
     padding-top: 45px;
 }
 
+.resultat{
+    display: flex;
+}
