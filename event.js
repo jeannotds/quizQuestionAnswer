@@ -1,3 +1,5 @@
+
+
 let erreurNode = document.querySelectorAll('.erreur');
 console.log(erreurNode)
 let radioVal;
