@@ -1,26 +1,29 @@
+let erreurNode = document.querySelectorAll('.erreur');
+console.log(erreurNode)
 let radioVal;
 let counter = 0;
 function action(){
     commencer.addEventListener('click', (e)=>{
         e.preventDefault();
-        let nom = document.querySelector('#nom').value;
-        let email = document.querySelector('#email').value;
-        console.log(nom)
-        console.log(email)
-        let erreurNom = document.querySelector('#erreur-nom');
-        let erreurEmail = document.querySelector('#erreur-email');
-        let erreurE;
+        let nom = document.querySelector('#nom')
+        let email = document.querySelector('#email')
 
-        nomJoueur[0].textContent = nom;
-        nomJoueur[1].textContent = nom;
-        emailJoueur[0].textContent = email;
-        emailJoueur[1].textContent = email;
 
-        if(!nom && !email){
-            erreurE = "Entrer votre nom";
-            e.preventDefault();
-            console.log("commencer");
+        nomJoueur[0].textContent = nom.value;
+        nomJoueur[1].textContent = nom.value;
+        emailJoueur[0].textContent = email.value;
+        emailJoueur[1].textContent = email.value;
+        clearMessageA();
+       if(!nom.value || !email.value){
+        if(!(nom.value)){
+            erreurNode[0].innerHTML = "Entrer votre nom";
+            // clearMessage()
         }
+        if(!emailIsValid(email.value)){
+            erreurNode[1].innerHTML = "Entrer votre E-mail";
+            // clearMessage()
+        }
+       }
         else{
         e.preventDefault()
         index.style.display = "none";
@@ -46,7 +49,20 @@ function action(){
         email = document.querySelector('#email').value="";
         }
     })
+    function clearMessageA(){
+        for(let i = 0; i<erreurNode.length; i++){
+            erreurNode[i].innerHTML ="";
+        }
+    }
+    function emailIsValid(email){
+        let pattern  = /\S+@\S+\.\S+/;
+        return pattern.test(email);
+    }
+    
 }
+
+
+
       function suivant_1(e){
 
                e.preventDefault()

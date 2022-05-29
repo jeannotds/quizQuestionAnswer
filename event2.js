@@ -1,3 +1,8 @@
+//FORMULAIRE
+const formulaire = document.querySelector('#formulaire');
+
+
+//////////////
 let index = document.querySelector('#index');
 let afQuest = document.querySelectorAll('.bloc')
 let commencer = document.querySelector('#commencer');
