@@ -1,5 +1,3 @@
-
-
 let erreurNode = document.querySelectorAll('.erreur');
 console.log(erreurNode)
 let radioVal;
@@ -10,21 +8,20 @@ function action(){
         let nom = document.querySelector('#nom')
         let email = document.querySelector('#email')
 
-
         nomJoueur[0].textContent = nom.value;
         nomJoueur[1].textContent = nom.value;
         emailJoueur[0].textContent = email.value;
         emailJoueur[1].textContent = email.value;
         clearMessageA();
        if(!nom.value || !email.value){
-        if(!(nom.value)){
-            erreurNode[0].innerHTML = "Entrer votre nom";
-            // clearMessage()
-        }
-        if(!emailIsValid(email.value)){
-            erreurNode[1].innerHTML = "Entrer votre E-mail";
-            // clearMessage()
-        }
+            if(!(nom.value)){
+                erreurNode[0].innerHTML = "N’oubliez pas de renseigner votre nom avant de commencer le Quiz. ";
+                // clearMessage()
+            }
+            if(!emailIsValid(email.value)){
+                erreurNode[1].innerHTML = "N’oubliez pas de renseigner votre email avant de commencer le Quiz";
+                // clearMessage()
+            }
        }
         else{
         e.preventDefault()
@@ -62,11 +59,8 @@ function action(){
     }
     
 }
-
-
-
+    //BOUTONS AVEC PROGRESS BAR TIMER
       function suivant_1(e){
-
                e.preventDefault()
                afQuest[1].style.display = 'none';
                afQuest[2].style.display = 'block';
@@ -95,7 +89,7 @@ function action(){
                 if(radios){
                     let val = radios.value;
                     console.log(val);
-                    if(val === "kinshasa"){
+                    if(val === "js"){
                         counter += 1;
                         console.log(counter)
                     }
@@ -133,7 +127,7 @@ function action(){
                 if(radios){
                     let val = radios.value;
                 console.log(val);
-                    if(val === "a"){
+                    if(val === "alert"){
                         counter += 1;
                         console.log(counter)
                     }
@@ -171,7 +165,7 @@ function action(){
             if(radios){
                 let val = radios.value;
             console.log(val);
-                if(val === "oui"){
+                if(val === "function"){
                     counter += 1;
                     console.log(counter)
                 }
@@ -208,7 +202,7 @@ function action(){
             if(radios){
                 let val = radios.value;
                 console.log(val);
-                if(val === "css"){
+                if(val === "while"){
                     counter += 1;
                     console.log(counter)
                 }
@@ -245,7 +239,7 @@ function action(){
             if(radios){
                 let val = radios.value;
                 console.log(val);
-                if(val === "java"){
+                if(val === "commentaire"){
                     counter += 1;
                     console.log(counter)
                 }
@@ -281,7 +275,7 @@ function action(){
             if(radios){
                 let val = radios.value;
             console.log(val);
-                if(val === "php"){
+                if(val === "tableau"){
                     counter += 1;
                     console.log(counter)
                 }
@@ -317,7 +311,7 @@ function action(){
           if(radios){
             let val = radios.value;
             console.log(val);
-            if(val === "c"){
+            if(val === "mathMax"){
                 counter += 1;
                 console.log(counter)
             }
@@ -353,7 +347,7 @@ function action(){
            if(radios){
             let val = radios.value;
             console.log(val);
-            if(val === "python"){
+            if(val === "body"){
                 counter += 1;
                 console.log(counter)
             }
@@ -390,7 +384,7 @@ function action(){
            if(radios){
             let val = radios.value;
             console.log(val);
-            if(val === "action"){
+            if(val === "if"){
                 counter += 1;
                 console.log(counter)
             }
@@ -427,7 +421,7 @@ function action(){
          if(radios){
             let val = radios.value;
             console.log(val);
-            if(val === "jeu"){
+            if(val === "date"){
                 counter += 1;
                 console.log(counter)
             }
@@ -464,7 +458,7 @@ function action(){
           if(radios){
             let val = radios.value;
             console.log(val);
-            if(val === "vien"){
+            if(val === "navigator"){
                 counter += 1;
                 console.log(counter)
             }
@@ -536,7 +530,7 @@ function action(){
           if(radios){
             let val = radios.value;
             console.log(val);
-            if(val === "dom"){
+            if(val === "non"){
                 counter += 1;
                 console.log(counter)
             }
@@ -570,7 +564,7 @@ function action(){
             if(radios){
                 let val = radios.value;
                 console.log(val);
-                if(val === "bloc"){
+                if(val === "oui"){
                     counter += 1;
                     console.log("somme = " + counter)
                 }
@@ -587,9 +581,8 @@ function action(){
              if(radios){
                  let val = radios.value;
                  console.log(val);
-                 if(val === "big"){
+                 if(val === "cookie"){
                      counter += 1;
-                     console.log("somme = " + counter)
                  }
             } 
                 if(counter<8){
